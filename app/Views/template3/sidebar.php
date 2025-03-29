@@ -1,7 +1,7 @@
 <aside>
     <div class="top">
         <div class="logo">
-            <img src="<?= base_url(); ?>img/Logo.png" alt="MetronARC Logo"><h3>Metronarc <span class="danger">Technology</span></h3>
+            <img src="<?= base_url(); ?>img/ronstan.png" alt="Ronstan Logo">
         </div>
         <div class="close" id="close-btn">
             <span class="material-symbols-outlined">close</span>
@@ -13,9 +13,9 @@
             <span class="lni lni-grid-alt"></span>
             <h3>Dashboard</h3>
         </a>
-        <a href="<?= base_url('user/record'); ?>" class="<?= ($sidebarData == "record") ? 'active' : 'inactive' ?>">
-            <span class="fa-regular fa-clipboard"></span>
-            <h3>Records</h3>
+        <a href="<?= base_url('recap'); ?>" class="<?= ($sidebarData == "recap") ? 'active' : 'inactive' ?>">
+            <span class="lni lni-files"></span>
+            <h3>Recap</h3>
         </a>
         <a href="<?= base_url('monitoring'); ?>" class="<?= ($sidebarData == "monitoring") ? 'active' : 'inactive' ?>">
             <span class="fa-solid fa-chart-line"></span>

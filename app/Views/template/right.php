@@ -9,7 +9,7 @@
         </div>
         <div class="profile">
             <div class="info">
-                <p>Hey, <b>Metronarc</b></p>
+                <p>Hey, <b>Ronstan</b></p>
                 <small class="text-muted">Admin</small>
             </div>
             <div class="profile-photo">

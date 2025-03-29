@@ -26,10 +26,10 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname' => '127.0.0.1',
-        'username' => 'u558841402_I8yXN',
-        'password' => '3MT8u4rJ8G',
-        'database' => 'u558841402_bLePr',
+        'hostname'     => 'localhost',
+        'username'     => '',
+        'password'     => '',
+        'database'     => '',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
@@ -56,7 +56,7 @@ class Database extends Config
     //     * @var array<string, mixed>
     //     */
     //    public array $default = [
-    //        'database' => 'u558841402_bLePr',
+    //        'database'    => 'database.db',
     //        'DBDriver'    => 'SQLite3',
     //        'DBPrefix'    => '',
     //        'DBDebug'     => true,
@@ -78,10 +78,10 @@ class Database extends Config
     //     */
     //    public array $default = [
     //        'DSN'        => '',
-    //        'hostname' => '127.0.0.1',
-    //        'username' => 'u558841402_I8yXN',
-    //        'password' => '3MT8u4rJ8G',
-    //        'database' => 'u558841402_bLePr',
+    //        'hostname'   => 'localhost',
+    //        'username'   => 'root',
+    //        'password'   => 'root',
+    //        'database'   => 'ci4',
     //        'schema'     => 'public',
     //        'DBDriver'   => 'Postgre',
     //        'DBPrefix'   => '',
@@ -105,10 +105,10 @@ class Database extends Config
     //     */
     //    public array $default = [
     //        'DSN'        => '',
-    //        'hostname' => '127.0.0.1',
-    //        'username' => 'u558841402_I8yXN',
-    //        'password' => '3MT8u4rJ8G',
-    //        'database' => 'u558841402_bLePr',
+    //        'hostname'   => 'localhost',
+    //        'username'   => 'root',
+    //        'password'   => 'root',
+    //        'database'   => 'ci4',
     //        'schema'     => 'dbo',
     //        'DBDriver'   => 'SQLSRV',
     //        'DBPrefix'   => '',
@@ -139,8 +139,8 @@ class Database extends Config
     //     */
     //    public array $default = [
     //        'DSN'        => 'localhost:1521/XEPDB1',
-    //        'username' => 'u558841402_I8yXN',
-    //        'password' => '3MT8u4rJ8G',
+    //        'username'   => 'root',
+    //        'password'   => 'root',
     //        'DBDriver'   => 'OCI8',
     //        'DBPrefix'   => '',
     //        'pConnect'   => false,
@@ -162,10 +162,10 @@ class Database extends Config
      */
     public array $tests = [
         'DSN'         => '',
-        'hostname' => '127.0.0.1',
-        'username' => 'u558841402_I8yXN',
-        'password' => '3MT8u4rJ8G',
-        'database' => 'u558841402_bLePr',
+        'hostname'    => '127.0.0.1',
+        'username'    => '',
+        'password'    => '',
+        'database'    => ':memory:',
         'DBDriver'    => 'SQLite3',
         'DBPrefix'    => 'db_',  // Needed to ensure we're working correctly with prefixes live. DO NOT REMOVE FOR CI DEVS
         'pConnect'    => false,
