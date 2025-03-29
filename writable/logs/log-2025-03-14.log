@@ -1,0 +1,30 @@
+ERROR - 2025-03-14 16:19:19 --> File received: CodeIgniter\HTTP\Files\UploadedFile Object
+(
+    [size:protected] => 0
+    [originalMimeType:protected] => 
+    [path:protected] => 
+    [clientPath:protected] => image.png
+    [originalName:protected] => image.png
+    [name:protected] => image.png
+    [error:protected] => 1
+    [hasMoved:protected] => 
+    [pathName:SplFileInfo:private] => 
+    [fileName:SplFileInfo:private] => 
+)
+
+ERROR - 2025-03-14 16:19:19 --> File upload failed or no file uploaded.
+ERROR - 2025-03-14 16:19:26 --> File received: CodeIgniter\HTTP\Files\UploadedFile Object
+(
+    [size:protected] => 81486
+    [originalMimeType:protected] => image/jpeg
+    [path:protected] => C:\wamp64\tmp\php986E.tmp
+    [clientPath:protected] => IMG_20230624_201129.jpg
+    [originalName:protected] => IMG_20230624_201129.jpg
+    [name:protected] => IMG_20230624_201129.jpg
+    [error:protected] => 0
+    [hasMoved:protected] => 
+    [pathName:SplFileInfo:private] => C:\wamp64\tmp\php986E.tmp
+    [fileName:SplFileInfo:private] => php986E.tmp
+)
+
+ERROR - 2025-03-14 16:19:26 --> File name: IMG_20230624_201129.jpg

@@ -1,0 +1,2593 @@
+CRITICAL - 2025-02-28 04:19:44 --> ErrorException: Undefined variable $data
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\user\monitoring\machineDetails.php on line 13.
+ 1 APPPATH\Views\user\monitoring\machineDetails.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(81): view('user/monitoring/machineDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-28 04:24:43 --> mysqli_sql_exception: Unknown column 'MACHINE-1' in 'where clause' in C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT \n       ...', 0)
+#1 C:\wamp64\www\oilid\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \n       ...')
+#2 C:\wamp64\www\oilid\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \n       ...')
+#3 C:\wamp64\www\oilid\app\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT \n       ...')
+#4 C:\wamp64\www\oilid\system\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+#5 C:\wamp64\www\oilid\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+#6 C:\wamp64\www\oilid\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\oilid\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\oilid\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\oilid\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-02-28 04:24:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'MACHINE-1' in 'where clause'
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-1`
+    LIMIT 25;')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 04:24:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'MACHINE-1' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-1`
+    LIMIT 25;')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-1`
+    LIMIT 25;')
+ 3 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-1`
+    LIMIT 25;')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 04:24:43 --> [Caused by] mysqli_sql_exception: Unknown column 'MACHINE-1' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-1`
+    LIMIT 25;', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-1`
+    LIMIT 25;')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-1`
+    LIMIT 25;')
+ 4 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-1`
+    LIMIT 25;')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-28 04:25:10 --> mysqli_sql_exception: Unknown column 'MACHINE-1' in 'where clause' in C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT \n       ...', 0)
+#1 C:\wamp64\www\oilid\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \n       ...')
+#2 C:\wamp64\www\oilid\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \n       ...')
+#3 C:\wamp64\www\oilid\app\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT \n       ...')
+#4 C:\wamp64\www\oilid\system\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+#5 C:\wamp64\www\oilid\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+#6 C:\wamp64\www\oilid\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\oilid\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\oilid\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\oilid\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-02-28 04:25:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'MACHINE-1' in 'where clause'
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-1`
+    LIMIT 25;')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 04:25:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'MACHINE-1' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-1`
+    LIMIT 25;')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-1`
+    LIMIT 25;')
+ 3 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-1`
+    LIMIT 25;')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 04:25:10 --> [Caused by] mysqli_sql_exception: Unknown column 'MACHINE-1' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-1`
+    LIMIT 25;', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-1`
+    LIMIT 25;')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-1`
+    LIMIT 25;')
+ 4 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-1`
+    LIMIT 25;')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-28 04:26:43 --> mysqli_sql_exception: Unknown column 'MACHINE-1' in 'where clause' in C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT \n       ...', 0)
+#1 C:\wamp64\www\oilid\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \n       ...')
+#2 C:\wamp64\www\oilid\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \n       ...')
+#3 C:\wamp64\www\oilid\app\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT \n       ...')
+#4 C:\wamp64\www\oilid\system\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+#5 C:\wamp64\www\oilid\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+#6 C:\wamp64\www\oilid\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\oilid\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\oilid\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\oilid\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-02-28 04:26:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'MACHINE-1' in 'where clause'
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-1`
+    LIMIT 25;')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 04:26:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'MACHINE-1' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-1`
+    LIMIT 25;')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-1`
+    LIMIT 25;')
+ 3 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-1`
+    LIMIT 25;')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 04:26:43 --> [Caused by] mysqli_sql_exception: Unknown column 'MACHINE-1' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-1`
+    LIMIT 25;', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-1`
+    LIMIT 25;')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-1`
+    LIMIT 25;')
+ 4 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-1`
+    LIMIT 25;')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-28 04:26:54 --> mysqli_sql_exception: Unknown column 'MACHINE-2' in 'where clause' in C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT \n       ...', 0)
+#1 C:\wamp64\www\oilid\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \n       ...')
+#2 C:\wamp64\www\oilid\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \n       ...')
+#3 C:\wamp64\www\oilid\app\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT \n       ...')
+#4 C:\wamp64\www\oilid\system\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+#5 C:\wamp64\www\oilid\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+#6 C:\wamp64\www\oilid\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\oilid\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\oilid\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\oilid\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-02-28 04:26:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'MACHINE-2' in 'where clause'
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-2`
+    LIMIT 25;')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 04:26:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'MACHINE-2' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-2`
+    LIMIT 25;')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-2`
+    LIMIT 25;')
+ 3 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-2`
+    LIMIT 25;')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 04:26:54 --> [Caused by] mysqli_sql_exception: Unknown column 'MACHINE-2' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-2`
+    LIMIT 25;', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-2`
+    LIMIT 25;')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-2`
+    LIMIT 25;')
+ 4 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = `MACHINE-2`
+    LIMIT 25;')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-28 04:28:28 --> mysqli_sql_exception: Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation '=' in C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT \n       ...', 0)
+#1 C:\wamp64\www\oilid\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \n       ...')
+#2 C:\wamp64\www\oilid\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \n       ...')
+#3 C:\wamp64\www\oilid\app\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT \n       ...', Array)
+#4 C:\wamp64\www\oilid\system\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+#5 C:\wamp64\www\oilid\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+#6 C:\wamp64\www\oilid\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\oilid\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\oilid\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\oilid\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-02-28 04:28:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation '='
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = ?', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 04:28:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'')
+ 3 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = ?', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 04:28:28 --> [Caused by] mysqli_sql_exception: Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'')
+ 4 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = ?', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-28 04:30:33 --> mysqli_sql_exception: Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation '=' in C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT \n    a.j...', 0)
+#1 C:\wamp64\www\oilid\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \n    a.j...')
+#2 C:\wamp64\www\oilid\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \n    a.j...')
+#3 C:\wamp64\www\oilid\app\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT \n    a.j...', Array)
+#4 C:\wamp64\www\oilid\system\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+#5 C:\wamp64\www\oilid\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+#6 C:\wamp64\www\oilid\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\oilid\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\oilid\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\oilid\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-02-28 04:30:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation '='
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+    a.jobRFID,
+    j.jobRFID,
+    j.jobNumber,
+    j.jobName,
+    j.jobDescription,
+    a.weldMetalRFID,
+    w.weldMetalRFID,
+    w.weldMetalNumber,
+    w.weldMetalName,
+    w.weldMetalCertNumber,
+    w.weldMetalDescription,
+    a.userRFID,
+    e.cardUID,
+    e.Name,
+    e.welder_image
+FROM area1 AS a
+LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+WHERE a.MachineID COLLATE utf8mb4_general_ci = ?', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 04:30:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+    a.jobRFID,
+    j.jobRFID,
+    j.jobNumber,
+    j.jobName,
+    j.jobDescription,
+    a.weldMetalRFID,
+    w.weldMetalRFID,
+    w.weldMetalNumber,
+    w.weldMetalName,
+    w.weldMetalCertNumber,
+    w.weldMetalDescription,
+    a.userRFID,
+    e.cardUID,
+    e.Name,
+    e.welder_image
+FROM area1 AS a
+LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+WHERE a.MachineID COLLATE utf8mb4_general_ci = \'MACHINE-1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+    a.jobRFID,
+    j.jobRFID,
+    j.jobNumber,
+    j.jobName,
+    j.jobDescription,
+    a.weldMetalRFID,
+    w.weldMetalRFID,
+    w.weldMetalNumber,
+    w.weldMetalName,
+    w.weldMetalCertNumber,
+    w.weldMetalDescription,
+    a.userRFID,
+    e.cardUID,
+    e.Name,
+    e.welder_image
+FROM area1 AS a
+LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+WHERE a.MachineID COLLATE utf8mb4_general_ci = \'MACHINE-1\'')
+ 3 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+    a.jobRFID,
+    j.jobRFID,
+    j.jobNumber,
+    j.jobName,
+    j.jobDescription,
+    a.weldMetalRFID,
+    w.weldMetalRFID,
+    w.weldMetalNumber,
+    w.weldMetalName,
+    w.weldMetalCertNumber,
+    w.weldMetalDescription,
+    a.userRFID,
+    e.cardUID,
+    e.Name,
+    e.welder_image
+FROM area1 AS a
+LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+WHERE a.MachineID COLLATE utf8mb4_general_ci = ?', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 04:30:33 --> [Caused by] mysqli_sql_exception: Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT 
+    a.jobRFID,
+    j.jobRFID,
+    j.jobNumber,
+    j.jobName,
+    j.jobDescription,
+    a.weldMetalRFID,
+    w.weldMetalRFID,
+    w.weldMetalNumber,
+    w.weldMetalName,
+    w.weldMetalCertNumber,
+    w.weldMetalDescription,
+    a.userRFID,
+    e.cardUID,
+    e.Name,
+    e.welder_image
+FROM area1 AS a
+LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+WHERE a.MachineID COLLATE utf8mb4_general_ci = \'MACHINE-1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+    a.jobRFID,
+    j.jobRFID,
+    j.jobNumber,
+    j.jobName,
+    j.jobDescription,
+    a.weldMetalRFID,
+    w.weldMetalRFID,
+    w.weldMetalNumber,
+    w.weldMetalName,
+    w.weldMetalCertNumber,
+    w.weldMetalDescription,
+    a.userRFID,
+    e.cardUID,
+    e.Name,
+    e.welder_image
+FROM area1 AS a
+LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+WHERE a.MachineID COLLATE utf8mb4_general_ci = \'MACHINE-1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+    a.jobRFID,
+    j.jobRFID,
+    j.jobNumber,
+    j.jobName,
+    j.jobDescription,
+    a.weldMetalRFID,
+    w.weldMetalRFID,
+    w.weldMetalNumber,
+    w.weldMetalName,
+    w.weldMetalCertNumber,
+    w.weldMetalDescription,
+    a.userRFID,
+    e.cardUID,
+    e.Name,
+    e.welder_image
+FROM area1 AS a
+LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+WHERE a.MachineID COLLATE utf8mb4_general_ci = \'MACHINE-1\'')
+ 4 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+    a.jobRFID,
+    j.jobRFID,
+    j.jobNumber,
+    j.jobName,
+    j.jobDescription,
+    a.weldMetalRFID,
+    w.weldMetalRFID,
+    w.weldMetalNumber,
+    w.weldMetalName,
+    w.weldMetalCertNumber,
+    w.weldMetalDescription,
+    a.userRFID,
+    e.cardUID,
+    e.Name,
+    e.welder_image
+FROM area1 AS a
+LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+WHERE a.MachineID COLLATE utf8mb4_general_ci = ?', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-28 04:32:46 --> mysqli_sql_exception: Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation '=' in C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT \n       ...', 0)
+#1 C:\wamp64\www\oilid\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \n       ...')
+#2 C:\wamp64\www\oilid\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \n       ...')
+#3 C:\wamp64\www\oilid\app\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT \n       ...', Array)
+#4 C:\wamp64\www\oilid\system\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+#5 C:\wamp64\www\oilid\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+#6 C:\wamp64\www\oilid\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\oilid\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\oilid\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\oilid\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-02-28 04:32:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation '='
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = ?', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 04:32:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'')
+ 3 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = ?', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 04:32:46 --> [Caused by] mysqli_sql_exception: Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'')
+ 4 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = ?', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-28 04:32:47 --> mysqli_sql_exception: Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation '=' in C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT \n       ...', 0)
+#1 C:\wamp64\www\oilid\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \n       ...')
+#2 C:\wamp64\www\oilid\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \n       ...')
+#3 C:\wamp64\www\oilid\app\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT \n       ...', Array)
+#4 C:\wamp64\www\oilid\system\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+#5 C:\wamp64\www\oilid\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+#6 C:\wamp64\www\oilid\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\oilid\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\oilid\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\oilid\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-02-28 04:32:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation '='
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = ?', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 04:32:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'')
+ 3 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = ?', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 04:32:47 --> [Caused by] mysqli_sql_exception: Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'')
+ 4 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = ?', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-28 04:32:50 --> mysqli_sql_exception: Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation '=' in C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT \n       ...', 0)
+#1 C:\wamp64\www\oilid\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \n       ...')
+#2 C:\wamp64\www\oilid\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \n       ...')
+#3 C:\wamp64\www\oilid\app\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT \n       ...', Array)
+#4 C:\wamp64\www\oilid\system\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+#5 C:\wamp64\www\oilid\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+#6 C:\wamp64\www\oilid\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\oilid\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\oilid\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\oilid\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-02-28 04:32:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation '='
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = ?', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 04:32:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'')
+ 3 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = ?', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 04:32:50 --> [Caused by] mysqli_sql_exception: Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'')
+ 4 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = ?', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-28 04:34:12 --> mysqli_sql_exception: Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation '=' in C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT \n       ...', 0)
+#1 C:\wamp64\www\oilid\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \n       ...')
+#2 C:\wamp64\www\oilid\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \n       ...')
+#3 C:\wamp64\www\oilid\app\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT \n       ...', Array)
+#4 C:\wamp64\www\oilid\system\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+#5 C:\wamp64\www\oilid\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+#6 C:\wamp64\www\oilid\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\oilid\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\oilid\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\oilid\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-02-28 04:34:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation '='
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = ?', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 04:34:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'')
+ 3 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = ?', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 04:34:12 --> [Caused by] mysqli_sql_exception: Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'')
+ 4 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        j.jobRFID,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = ?', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 04:35:23 --> ErrorException: Array to string conversion
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\user\monitoring\machineDetails.php on line 13.
+ 1 APPPATH\Views\user\monitoring\machineDetails.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(107): view('user/monitoring/machineDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 04:37:35 --> ErrorException: Array to string conversion
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\user\monitoring\machineDetails.php on line 13.
+ 1 APPPATH\Views\user\monitoring\machineDetails.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(107): view('user/monitoring/machineDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 04:37:50 --> ErrorException: Undefined array key "jobRFID"
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\user\monitoring\machineDetails.php on line 13.
+ 1 APPPATH\Views\user\monitoring\machineDetails.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jobRFID"', 'C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(107): view('user/monitoring/machineDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 04:44:23 --> ErrorException: Undefined variable $machines
+[Method: GET, Route: monitoring]
+in APPPATH\Views\user\monitoring\monitoring.php on line 17.
+ 1 APPPATH\Views\user\monitoring\monitoring.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $machines', 'C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\monitoring.php', 17)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\monitoring.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/monitoring', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(51): view('user/monitoring/monitoring', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 04:49:48 --> ErrorException: Undefined variable $activeMachineCount
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\user\monitoring\machineDetails.php on line 14.
+ 1 APPPATH\Views\user\monitoring\machineDetails.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $activeMachineCount', 'C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php', 14)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(107): view('user/monitoring/machineDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 05:06:21 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\user\monitoring\machineDetails.php on line 35.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+ 4 APPPATH\Controllers\Monitoring.php(132): view('user/monitoring/machineDetails', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 05:09:23 --> ErrorException: Undefined variable $arcTotal
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\user\monitoring\machineDetails.php on line 35.
+ 1 APPPATH\Views\user\monitoring\machineDetails.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $arcTotal', 'C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(109): view('user/monitoring/machineDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 05:09:43 --> ErrorException: Undefined variable $arcTotal
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\user\monitoring\machineDetails.php on line 35.
+ 1 APPPATH\Views\user\monitoring\machineDetails.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $arcTotal', 'C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(109): view('user/monitoring/machineDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 05:10:25 --> ErrorException: Undefined variable $arcTotal
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\user\monitoring\machineDetails.php on line 35.
+ 1 APPPATH\Views\user\monitoring\machineDetails.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $arcTotal', 'C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(109): view('user/monitoring/machineDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 05:10:58 --> ErrorException: Undefined variable $arcTotal
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\user\monitoring\machineDetails.php on line 35.
+ 1 APPPATH\Views\user\monitoring\machineDetails.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $arcTotal', 'C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(109): view('user/monitoring/machineDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 05:12:19 --> ErrorException: Undefined variable $arcTotal
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\user\monitoring\machineDetails.php on line 43.
+ 1 APPPATH\Views\user\monitoring\machineDetails.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $arcTotal', 'C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php', 43)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(109): view('user/monitoring/machineDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 05:12:24 --> ErrorException: Undefined variable $arcTotal
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\user\monitoring\machineDetails.php on line 43.
+ 1 APPPATH\Views\user\monitoring\machineDetails.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $arcTotal', 'C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php', 43)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(109): view('user/monitoring/machineDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 05:12:41 --> ErrorException: Undefined variable $arcTotal
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\user\monitoring\machineDetails.php on line 43.
+ 1 APPPATH\Views\user\monitoring\machineDetails.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $arcTotal', 'C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php', 43)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(109): view('user/monitoring/machineDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 05:12:43 --> ErrorException: Undefined variable $arcTotal
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\user\monitoring\machineDetails.php on line 43.
+ 1 APPPATH\Views\user\monitoring\machineDetails.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $arcTotal', 'C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php', 43)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(109): view('user/monitoring/machineDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 05:39:46 --> ErrorException: Undefined array key "weldMetalCertNo"
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\user\monitoring\machineDetails.php on line 75.
+ 1 APPPATH\Views\user\monitoring\machineDetails.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "weldMetalCertNo"', 'C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php', 75)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(110): view('user/monitoring/machineDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 05:40:05 --> ErrorException: Undefined array key "weldMEtalRFID"
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\user\monitoring\machineDetails.php on line 79.
+ 1 APPPATH\Views\user\monitoring\machineDetails.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "weldMEtalRFID"', 'C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php', 79)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(110): view('user/monitoring/machineDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 05:40:27 --> ErrorException: Undefined array key "weldMetalQR"
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\user\monitoring\machineDetails.php on line 83.
+ 1 APPPATH\Views\user\monitoring\machineDetails.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "weldMetalQR"', 'C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php', 83)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(110): view('user/monitoring/machineDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 05:45:39 --> ErrorException: Undefined variable $arcTime
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\user\monitoring\machineDetails.php on line 102.
+ 1 APPPATH\Views\user\monitoring\machineDetails.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $arcTime', 'C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php', 102)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\machineDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(111): view('user/monitoring/machineDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 05:59:18 --> ErrorException: Undefined variable $machine
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\template4\right.php on line 25.
+ 1 APPPATH\Views\template4\right.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $machine', 'C:\\wamp64\\www\\oilid\\app\\Views\\template4\\right.php', 25)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\template4\\right.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(487): CodeIgniter\View\View->render('template4/right', null, true)
+ 5 APPPATH\Views\template4\index.php(33): CodeIgniter\View\View->include('template4/right')
+ 6 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\template4\\index.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('template4/index', [], true)
+ 9 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+10 APPPATH\Controllers\Monitoring.php(111): view('user/monitoring/machineDetails', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 06:01:11 --> ErrorException: Undefined variable $machine
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\template4\right.php on line 25.
+ 1 APPPATH\Views\template4\right.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $machine', 'C:\\wamp64\\www\\oilid\\app\\Views\\template4\\right.php', 25)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\template4\\right.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(487): CodeIgniter\View\View->render('template4/right', null, true)
+ 5 APPPATH\Views\template4\index.php(33): CodeIgniter\View\View->include('template4/right')
+ 6 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\template4\\index.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('template4/index', [], true)
+ 9 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+10 APPPATH\Controllers\Monitoring.php(112): view('user/monitoring/machineDetails', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 06:01:27 --> ErrorException: Undefined variable $machine
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\template4\right.php on line 25.
+ 1 APPPATH\Views\template4\right.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $machine', 'C:\\wamp64\\www\\oilid\\app\\Views\\template4\\right.php', 25)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\template4\\right.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(487): CodeIgniter\View\View->render('template4/right', null, true)
+ 5 APPPATH\Views\template4\index.php(33): CodeIgniter\View\View->include('template4/right')
+ 6 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\template4\\index.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('template4/index', [], true)
+ 9 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+10 APPPATH\Controllers\Monitoring.php(112): view('user/monitoring/machineDetails', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 06:01:37 --> ErrorException: Undefined variable $machine
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\template4\right.php on line 25.
+ 1 APPPATH\Views\template4\right.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $machine', 'C:\\wamp64\\www\\oilid\\app\\Views\\template4\\right.php', 25)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\template4\\right.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(487): CodeIgniter\View\View->render('template4/right', null, true)
+ 5 APPPATH\Views\template4\index.php(33): CodeIgniter\View\View->include('template4/right')
+ 6 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\template4\\index.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('template4/index', [], true)
+ 9 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+10 APPPATH\Controllers\Monitoring.php(112): view('user/monitoring/machineDetails', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 06:02:01 --> ErrorException: Undefined variable $machine
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\template4\right.php on line 25.
+ 1 APPPATH\Views\template4\right.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $machine', 'C:\\wamp64\\www\\oilid\\app\\Views\\template4\\right.php', 25)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\template4\\right.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(487): CodeIgniter\View\View->render('template4/right', null, true)
+ 5 APPPATH\Views\template4\index.php(33): CodeIgniter\View\View->include('template4/right')
+ 6 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\template4\\index.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('template4/index', [], true)
+ 9 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+10 APPPATH\Controllers\Monitoring.php(112): view('user/monitoring/machineDetails', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 06:02:20 --> ErrorException: Undefined array key "State"
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\template4\right.php on line 25.
+ 1 APPPATH\Views\template4\right.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "State"', 'C:\\wamp64\\www\\oilid\\app\\Views\\template4\\right.php', 25)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\template4\\right.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(487): CodeIgniter\View\View->render('template4/right', null, true)
+ 5 APPPATH\Views\template4\index.php(33): CodeIgniter\View\View->include('template4/right')
+ 6 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\template4\\index.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('template4/index', [], true)
+ 9 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+10 APPPATH\Controllers\Monitoring.php(112): view('user/monitoring/machineDetails', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 06:04:37 --> ErrorException: Undefined array key "State"
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\template4\right.php on line 25.
+ 1 APPPATH\Views\template4\right.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "State"', 'C:\\wamp64\\www\\oilid\\app\\Views\\template4\\right.php', 25)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\template4\\right.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(487): CodeIgniter\View\View->render('template4/right', null, true)
+ 5 APPPATH\Views\template4\index.php(33): CodeIgniter\View\View->include('template4/right')
+ 6 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\template4\\index.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('template4/index', [], true)
+ 9 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+10 APPPATH\Controllers\Monitoring.php(112): view('user/monitoring/machineDetails', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 06:07:26 --> ErrorException: Undefined array key "Status"
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in APPPATH\Views\template4\right.php on line 28.
+ 1 APPPATH\Views\template4\right.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Status"', 'C:\\wamp64\\www\\oilid\\app\\Views\\template4\\right.php', 28)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\template4\\right.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(487): CodeIgniter\View\View->render('template4/right', null, true)
+ 5 APPPATH\Views\template4\index.php(33): CodeIgniter\View\View->include('template4/right')
+ 6 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\template4\\index.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('template4/index', [], true)
+ 9 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/machineDetails', [], true)
+10 APPPATH\Controllers\Monitoring.php(112): view('user/monitoring/machineDetails', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 06:21:30 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: monitoring/activeMachine/area1]
+in APPPATH\Views\user\monitoring\activeMachine.php on line 12.
+ 1 APPPATH\Views\user\monitoring\activeMachine.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\activeMachine.php', 12)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\activeMachine.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/activeMachine', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(69): view('user/monitoring/activeMachine', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->activeMachine('area1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 06:21:35 --> ErrorException: Undefined variable $area
+[Method: GET, Route: monitoring/activeMachine/area1]
+in APPPATH\Views\user\monitoring\activeMachine.php on line 12.
+ 1 APPPATH\Views\user\monitoring\activeMachine.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $area', 'C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\activeMachine.php', 12)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\activeMachine.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/activeMachine', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(69): view('user/monitoring/activeMachine', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->activeMachine('area1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 06:21:48 --> ErrorException: Undefined variable $area
+[Method: GET, Route: monitoring/activeMachine/area1]
+in APPPATH\Views\user\monitoring\activeMachine.php on line 12.
+ 1 APPPATH\Views\user\monitoring\activeMachine.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $area', 'C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\activeMachine.php', 12)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\activeMachine.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/activeMachine', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(69): view('user/monitoring/activeMachine', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->activeMachine('area1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 06:22:17 --> ErrorException: Undefined variable $area
+[Method: GET, Route: monitoring/activeMachine/area1]
+in APPPATH\Views\user\monitoring\activeMachine.php on line 12.
+ 1 APPPATH\Views\user\monitoring\activeMachine.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $area', 'C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\activeMachine.php', 12)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\activeMachine.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/activeMachine', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(69): view('user/monitoring/activeMachine', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->activeMachine('area1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 06:22:26 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: monitoring/activeMachine/area1]
+in APPPATH\Views\user\monitoring\activeMachine.php on line 12.
+ 1 APPPATH\Views\user\monitoring\activeMachine.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\activeMachine.php', 12)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\user\\monitoring\\activeMachine.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/monitoring/activeMachine', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(69): view('user/monitoring/activeMachine', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->activeMachine('area1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-28 06:22:38 --> ErrorException: Undefined array key "jobCreationDate"
+[Method: GET, Route: record]
+in APPPATH\Views\record\index.php on line 33.
+ 1 APPPATH\Views\record\index.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jobCreationDate"', 'C:\\wamp64\\www\\oilid\\app\\Views\\record\\index.php', 33)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\record\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('record/index', [], true)
+ 5 APPPATH\Controllers\Record.php(36): view('record/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Record->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Record))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

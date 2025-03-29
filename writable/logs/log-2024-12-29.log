@@ -1,0 +1,41 @@
+ERROR - 2024-12-29 13:21:52 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'u558841402_sparc'@'localhost' (using password: YES) in C:\xampp\htdocs\oilid\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\oilid\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'u558841402_spar...', Object(SensitiveParameterValue), 'u558841402_oili...', 3306, '', 0)
+#1 C:\xampp\htdocs\oilid\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\oilid\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\oilid\app\Models\ItemModel.php(16): CodeIgniter\Database\BaseConnection->query('TRUNCATE TABLE ...')
+#4 C:\xampp\htdocs\oilid\app\Controllers\User.php(14): App\Models\ItemModel->truncateTable('tmprfid')
+#5 C:\xampp\htdocs\oilid\system\CodeIgniter.php(933): App\Controllers\User->index()
+#6 C:\xampp\htdocs\oilid\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\oilid\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\oilid\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\oilid\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\oilid\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp\htdocs\oilid\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\oilid\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\oilid\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\oilid\app\Models\ItemModel.php(16): CodeIgniter\Database\BaseConnection->query('TRUNCATE TABLE ...')
+#3 C:\xampp\htdocs\oilid\app\Controllers\User.php(14): App\Models\ItemModel->truncateTable('tmprfid')
+#4 C:\xampp\htdocs\oilid\system\CodeIgniter.php(933): App\Controllers\User->index()
+#5 C:\xampp\htdocs\oilid\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\xampp\htdocs\oilid\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\oilid\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\oilid\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\oilid\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-12-29 13:21:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\ItemModel.php(16): CodeIgniter\Database\BaseConnection->query('TRUNCATE TABLE `tmprfid`')
+ 3 APPPATH\Controllers\User.php(14): App\Models\ItemModel->truncateTable('tmprfid')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

@@ -1,0 +1,198 @@
+ERROR - 2025-02-21 15:00:50 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'oilid' in C:\wamp64\www\oilid_new\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\wamp64\www\oilid_new\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'oilid', 3306, '', 0)
+#1 C:\wamp64\www\oilid_new\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\wamp64\www\oilid_new\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\wamp64\www\oilid_new\app\Models\ItemModel.php(16): CodeIgniter\Database\BaseConnection->query('TRUNCATE TABLE ...')
+#4 C:\wamp64\www\oilid_new\app\Controllers\User.php(14): App\Models\ItemModel->truncateTable('tmprfid')
+#5 C:\wamp64\www\oilid_new\system\CodeIgniter.php(933): App\Controllers\User->index()
+#6 C:\wamp64\www\oilid_new\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\wamp64\www\oilid_new\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\oilid_new\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\oilid_new\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\oilid_new\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'oilid' in C:\wamp64\www\oilid_new\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\wamp64\www\oilid_new\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\wamp64\www\oilid_new\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\oilid_new\app\Models\ItemModel.php(16): CodeIgniter\Database\BaseConnection->query('TRUNCATE TABLE ...')
+#3 C:\wamp64\www\oilid_new\app\Controllers\User.php(14): App\Models\ItemModel->truncateTable('tmprfid')
+#4 C:\wamp64\www\oilid_new\system\CodeIgniter.php(933): App\Controllers\User->index()
+#5 C:\wamp64\www\oilid_new\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\wamp64\www\oilid_new\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\oilid_new\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\oilid_new\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\oilid_new\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-02-21 15:00:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'oilid'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\ItemModel.php(16): CodeIgniter\Database\BaseConnection->query('TRUNCATE TABLE `tmprfid`')
+ 3 APPPATH\Controllers\User.php(14): App\Models\ItemModel->truncateTable('tmprfid')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-21 15:01:23 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'oilid' in C:\wamp64\www\oilid_new\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\wamp64\www\oilid_new\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'oilid', 3306, '', 0)
+#1 C:\wamp64\www\oilid_new\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\wamp64\www\oilid_new\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\wamp64\www\oilid_new\app\Models\ItemModel.php(16): CodeIgniter\Database\BaseConnection->query('TRUNCATE TABLE ...')
+#4 C:\wamp64\www\oilid_new\app\Controllers\User.php(14): App\Models\ItemModel->truncateTable('tmprfid')
+#5 C:\wamp64\www\oilid_new\system\CodeIgniter.php(933): App\Controllers\User->index()
+#6 C:\wamp64\www\oilid_new\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\wamp64\www\oilid_new\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\oilid_new\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\oilid_new\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\oilid_new\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'oilid' in C:\wamp64\www\oilid_new\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\wamp64\www\oilid_new\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\wamp64\www\oilid_new\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\oilid_new\app\Models\ItemModel.php(16): CodeIgniter\Database\BaseConnection->query('TRUNCATE TABLE ...')
+#3 C:\wamp64\www\oilid_new\app\Controllers\User.php(14): App\Models\ItemModel->truncateTable('tmprfid')
+#4 C:\wamp64\www\oilid_new\system\CodeIgniter.php(933): App\Controllers\User->index()
+#5 C:\wamp64\www\oilid_new\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\wamp64\www\oilid_new\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\oilid_new\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\oilid_new\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\oilid_new\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-02-21 15:01:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'oilid'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\ItemModel.php(16): CodeIgniter\Database\BaseConnection->query('TRUNCATE TABLE `tmprfid`')
+ 3 APPPATH\Controllers\User.php(14): App\Models\ItemModel->truncateTable('tmprfid')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-21 15:01:37 --> mysqli_sql_exception: Table 'sparcexp.tmprfid' doesn't exist in C:\wamp64\www\oilid_new\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\oilid_new\system\Database\MySQLi\Connection.php(312): mysqli->query('TRUNCATE TABLE ...', 0)
+#1 C:\wamp64\www\oilid_new\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('TRUNCATE TABLE ...')
+#2 C:\wamp64\www\oilid_new\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('TRUNCATE TABLE ...')
+#3 C:\wamp64\www\oilid_new\app\Models\ItemModel.php(16): CodeIgniter\Database\BaseConnection->query('TRUNCATE TABLE ...')
+#4 C:\wamp64\www\oilid_new\app\Controllers\User.php(14): App\Models\ItemModel->truncateTable('tmprfid')
+#5 C:\wamp64\www\oilid_new\system\CodeIgniter.php(933): App\Controllers\User->index()
+#6 C:\wamp64\www\oilid_new\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\wamp64\www\oilid_new\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\oilid_new\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\oilid_new\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\oilid_new\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-02-21 15:01:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'sparcexp.tmprfid' doesn't exist
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\ItemModel.php(16): CodeIgniter\Database\BaseConnection->query('TRUNCATE TABLE `tmprfid`')
+ 2 APPPATH\Controllers\User.php(14): App\Models\ItemModel->truncateTable('tmprfid')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-21 15:01:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'sparcexp.tmprfid' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('TRUNCATE TABLE `tmprfid`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('TRUNCATE TABLE `tmprfid`')
+ 3 APPPATH\Models\ItemModel.php(16): CodeIgniter\Database\BaseConnection->query('TRUNCATE TABLE `tmprfid`')
+ 4 APPPATH\Controllers\User.php(14): App\Models\ItemModel->truncateTable('tmprfid')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-21 15:01:37 --> [Caused by] mysqli_sql_exception: Table 'sparcexp.tmprfid' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('TRUNCATE TABLE `tmprfid`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('TRUNCATE TABLE `tmprfid`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('TRUNCATE TABLE `tmprfid`')
+ 4 APPPATH\Models\ItemModel.php(16): CodeIgniter\Database\BaseConnection->query('TRUNCATE TABLE `tmprfid`')
+ 5 APPPATH\Controllers\User.php(14): App\Models\ItemModel->truncateTable('tmprfid')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-21 15:03:29 --> mysqli_sql_exception: Table 'sparcexp.itemlist' doesn't exist in C:\wamp64\www\oilid_new\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\oilid_new\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\oilid_new\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\oilid_new\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\oilid_new\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\oilid_new\system\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\oilid_new\system\BaseModel.php(610): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\wamp64\www\oilid_new\app\Controllers\ItemDetailsRFID.php(16): CodeIgniter\BaseModel->find(NULL)
+#7 C:\wamp64\www\oilid_new\system\CodeIgniter.php(933): App\Controllers\ItemDetailsRFID->index()
+#8 C:\wamp64\www\oilid_new\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetailsRFID))
+#9 C:\wamp64\www\oilid_new\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\oilid_new\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\wamp64\www\oilid_new\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\wamp64\www\oilid_new\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-02-21 15:03:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'sparcexp.itemlist' doesn't exist
+[Method: GET, Route: itemDetailsRFID]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `itemlist`', [], false)
+ 2 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(610): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Controllers\ItemDetailsRFID.php(16): CodeIgniter\BaseModel->find(null)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemDetailsRFID->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetailsRFID))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-21 15:03:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'sparcexp.itemlist' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `itemlist`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `itemlist`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `itemlist`', [], false)
+ 4 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(610): CodeIgniter\Model->doFind(false, null)
+ 6 APPPATH\Controllers\ItemDetailsRFID.php(16): CodeIgniter\BaseModel->find(null)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemDetailsRFID->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetailsRFID))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-21 15:03:29 --> [Caused by] mysqli_sql_exception: Table 'sparcexp.itemlist' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `itemlist`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `itemlist`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `itemlist`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `itemlist`', [], false)
+ 5 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(610): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Controllers\ItemDetailsRFID.php(16): CodeIgniter\BaseModel->find(null)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemDetailsRFID->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetailsRFID))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

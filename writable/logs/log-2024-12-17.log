@@ -1,0 +1,375 @@
+CRITICAL - 2024-12-17 14:55:00 --> ErrorException: Undefined array key "itemID"
+[Method: POST, Route: user/search]
+in APPPATH\Views\user\index.php on line 72.
+ 1 APPPATH\Views\user\index.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemID"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\index.php', 72)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/index', [], true)
+ 5 APPPATH\Controllers\User.php(58): view('user/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->search()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-17 14:55:09 --> ErrorException: Undefined array key "itemID"
+[Method: POST, Route: user/search]
+in APPPATH\Views\user\index.php on line 72.
+ 1 APPPATH\Views\user\index.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemID"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\index.php', 72)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/index', [], true)
+ 5 APPPATH\Controllers\User.php(58): view('user/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->search()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-17 14:55:35 --> ErrorException: Undefined array key "itemID"
+[Method: POST, Route: user/search]
+in APPPATH\Views\user\index.php on line 72.
+ 1 APPPATH\Views\user\index.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemID"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\index.php', 72)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/index', [], true)
+ 5 APPPATH\Controllers\User.php(58): view('user/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->search()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-17 14:55:49 --> ErrorException: Undefined array key "itemID"
+[Method: POST, Route: user/search]
+in APPPATH\Views\user\index.php on line 76.
+ 1 APPPATH\Views\user\index.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemID"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\index.php', 76)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/index', [], true)
+ 5 APPPATH\Controllers\User.php(58): view('user/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->search()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-17 15:31:13 --> ErrorException: Undefined array key "itemName"
+[Method: GET, Route: itemDetails]
+in APPPATH\Views\user\itemDetails.php on line 13.
+ 1 APPPATH\Views\user\itemDetails.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemName"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/itemDetails', [], true)
+ 5 APPPATH\Controllers\ItemDetails.php(30): view('user/itemDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemDetails->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetails))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-17 15:34:27 --> ErrorException: Undefined array key "itemName"
+[Method: GET, Route: itemDetails]
+in APPPATH\Views\user\itemDetails.php on line 13.
+ 1 APPPATH\Views\user\itemDetails.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemName"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/itemDetails', [], true)
+ 5 APPPATH\Controllers\ItemDetails.php(30): view('user/itemDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemDetails->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetails))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-17 15:37:05 --> ErrorException: Undefined array key "itemName"
+[Method: GET, Route: itemDetails]
+in APPPATH\Views\user\itemDetails.php on line 13.
+ 1 APPPATH\Views\user\itemDetails.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemName"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/itemDetails', [], true)
+ 5 APPPATH\Controllers\ItemDetails.php(30): view('user/itemDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemDetails->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetails))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-17 15:37:09 --> ErrorException: Undefined array key "itemName"
+[Method: GET, Route: itemDetails]
+in APPPATH\Views\user\itemDetails.php on line 13.
+ 1 APPPATH\Views\user\itemDetails.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemName"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/itemDetails', [], true)
+ 5 APPPATH\Controllers\ItemDetails.php(30): view('user/itemDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemDetails->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetails))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-17 15:37:35 --> ErrorException: Undefined array key "itemName"
+[Method: GET, Route: itemDetails]
+in APPPATH\Views\user\itemDetails.php on line 13.
+ 1 APPPATH\Views\user\itemDetails.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemName"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/itemDetails', [], true)
+ 5 APPPATH\Controllers\ItemDetails.php(30): view('user/itemDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemDetails->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetails))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-17 15:37:38 --> ErrorException: Undefined array key "itemName"
+[Method: GET, Route: itemDetails]
+in APPPATH\Views\user\itemDetails.php on line 13.
+ 1 APPPATH\Views\user\itemDetails.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemName"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/itemDetails', [], true)
+ 5 APPPATH\Controllers\ItemDetails.php(30): view('user/itemDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemDetails->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetails))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-17 15:39:05 --> ErrorException: Undefined array key "itemName"
+[Method: GET, Route: itemDetails]
+in APPPATH\Views\user\itemDetails.php on line 13.
+ 1 APPPATH\Views\user\itemDetails.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemName"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/itemDetails', [], true)
+ 5 APPPATH\Controllers\ItemDetails.php(30): view('user/itemDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemDetails->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetails))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-17 15:39:42 --> ErrorException: Undefined array key "itemName"
+[Method: GET, Route: itemDetails]
+in APPPATH\Views\user\itemDetails.php on line 13.
+ 1 APPPATH\Views\user\itemDetails.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemName"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/itemDetails', [], true)
+ 5 APPPATH\Controllers\ItemDetails.php(30): view('user/itemDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemDetails->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetails))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-17 15:40:08 --> ErrorException: Undefined array key "itemName"
+[Method: GET, Route: itemDetails]
+in APPPATH\Views\user\itemDetails.php on line 13.
+ 1 APPPATH\Views\user\itemDetails.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemName"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/itemDetails', [], true)
+ 5 APPPATH\Controllers\ItemDetails.php(30): view('user/itemDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemDetails->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetails))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-17 15:42:56 --> ErrorException: Undefined array key "itemName"
+[Method: GET, Route: itemDetails]
+in APPPATH\Views\user\itemDetails.php on line 13.
+ 1 APPPATH\Views\user\itemDetails.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemName"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/itemDetails', [], true)
+ 5 APPPATH\Controllers\ItemDetails.php(30): view('user/itemDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemDetails->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetails))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-17 15:43:02 --> ErrorException: Undefined array key "itemName"
+[Method: GET, Route: itemDetails]
+in APPPATH\Views\user\itemDetails.php on line 13.
+ 1 APPPATH\Views\user\itemDetails.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemName"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/itemDetails', [], true)
+ 5 APPPATH\Controllers\ItemDetails.php(30): view('user/itemDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemDetails->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetails))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-17 15:44:17 --> ErrorException: Undefined array key "itemName"
+[Method: GET, Route: itemDetails]
+in APPPATH\Views\user\itemDetails.php on line 13.
+ 1 APPPATH\Views\user\itemDetails.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemName"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/itemDetails', [], true)
+ 5 APPPATH\Controllers\ItemDetails.php(30): view('user/itemDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemDetails->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetails))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-17 15:46:11 --> ErrorException: Undefined array key "itemName"
+[Method: GET, Route: itemDetails]
+in APPPATH\Views\user\itemDetails.php on line 13.
+ 1 APPPATH\Views\user\itemDetails.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemName"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/itemDetails', [], true)
+ 5 APPPATH\Controllers\ItemDetails.php(30): view('user/itemDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemDetails->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetails))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-17 15:46:16 --> ErrorException: Undefined array key "itemName"
+[Method: GET, Route: itemDetails]
+in APPPATH\Views\user\itemDetails.php on line 13.
+ 1 APPPATH\Views\user\itemDetails.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemName"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/itemDetails', [], true)
+ 5 APPPATH\Controllers\ItemDetails.php(30): view('user/itemDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemDetails->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetails))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-17 15:48:09 --> ErrorException: Undefined array key "itemEquipType"
+[Method: GET, Route: itemDetails]
+in APPPATH\Views\user\itemDetails.php on line 17.
+ 1 APPPATH\Views\user\itemDetails.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemEquipType"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php', 17)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/itemDetails', [], true)
+ 5 APPPATH\Controllers\ItemDetails.php(30): view('user/itemDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemDetails->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetails))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-17 15:49:20 --> ErrorException: Undefined array key "itemImage"
+[Method: GET, Route: itemDetails]
+in APPPATH\Views\user\itemDetails.php on line 60.
+ 1 APPPATH\Views\user\itemDetails.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemImage"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php', 60)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/itemDetails', [], true)
+ 5 APPPATH\Controllers\ItemDetails.php(30): view('user/itemDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemDetails->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetails))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-17 15:54:29 --> ErrorException: Undefined array key "itemName"
+[Method: GET, Route: itemDetails]
+in APPPATH\Views\user\itemDetails.php on line 13.
+ 1 APPPATH\Views\user\itemDetails.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemName"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/itemDetails', [], true)
+ 5 APPPATH\Controllers\ItemDetails.php(31): view('user/itemDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemDetails->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetails))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-17 15:57:54 --> ErrorException: Undefined array key "itemName"
+[Method: GET, Route: itemDetailsRFID]
+in APPPATH\Views\user\itemDetails.php on line 13.
+ 1 APPPATH\Views\user\itemDetails.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemName"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/itemDetails', [], true)
+ 5 APPPATH\Controllers\ItemDetailsRFID.php(31): view('user/itemDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemDetailsRFID->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetailsRFID))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-17 15:58:31 --> ErrorException: Undefined array key "itemName"
+[Method: GET, Route: itemDetails]
+in APPPATH\Views\user\itemDetails.php on line 13.
+ 1 APPPATH\Views\user\itemDetails.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemName"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/itemDetails', [], true)
+ 5 APPPATH\Controllers\ItemDetails.php(31): view('user/itemDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemDetails->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetails))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-17 15:59:00 --> ErrorException: Undefined array key "itemName"
+[Method: GET, Route: itemDetails]
+in APPPATH\Views\user\itemDetails.php on line 13.
+ 1 APPPATH\Views\user\itemDetails.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemName"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetails.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/itemDetails', [], true)
+ 5 APPPATH\Controllers\ItemDetails.php(31): view('user/itemDetails', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemDetails->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetails))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-17 16:01:17 --> ErrorException: Undefined array key "itemImage"
+[Method: GET, Route: itemDetailsRFID]
+in APPPATH\Views\user\itemDetailsRFID.php on line 60.
+ 1 APPPATH\Views\user\itemDetailsRFID.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemImage"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetailsRFID.php', 60)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetailsRFID.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/itemDetailsRFID', [], true)
+ 5 APPPATH\Controllers\ItemDetailsRFID.php(31): view('user/itemDetailsRFID', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemDetailsRFID->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetailsRFID))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-17 16:01:47 --> ErrorException: Undefined array key "itemImage"
+[Method: GET, Route: itemDetailsRFID]
+in APPPATH\Views\user\itemDetailsRFID.php on line 60.
+ 1 APPPATH\Views\user\itemDetailsRFID.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "itemImage"', 'C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetailsRFID.php', 60)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\oilid\\app\\Views\\user\\itemDetailsRFID.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/itemDetailsRFID', [], true)
+ 5 APPPATH\Controllers\ItemDetailsRFID.php(31): view('user/itemDetailsRFID', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ItemDetailsRFID->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ItemDetailsRFID))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-17 16:46:31 --> Insert method called
+INFO - 2024-12-17 16:47:01 --> Insert method called
+INFO - 2024-12-17 16:48:17 --> Insert method called
+INFO - 2024-12-17 16:48:31 --> Insert method called
+INFO - 2024-12-17 16:49:31 --> Insert method called
+INFO - 2024-12-17 16:49:42 --> Insert method called
+INFO - 2024-12-17 16:52:44 --> Insert method called
+INFO - 2024-12-17 16:53:11 --> Insert method called
+INFO - 2024-12-17 16:55:02 --> Insert method called
+INFO - 2024-12-17 16:55:39 --> Insert method called
+INFO - 2024-12-17 16:55:53 --> Insert method called

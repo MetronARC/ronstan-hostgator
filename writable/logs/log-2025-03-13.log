@@ -1,0 +1,111 @@
+CRITICAL - 2025-03-13 15:10:44 --> ErrorException: Undefined variable $title
+[Method: GET, Route: nfc/read]
+in APPPATH\Views\template\index.php on line 17.
+ 1 APPPATH\Views\template\index.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\wamp64\\www\\oilid\\app\\Views\\template\\index.php', 17)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\template\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('template/index', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('nfc/read', [], true)
+ 6 APPPATH\Controllers\NFCRead.php(9): view('nfc/read')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NFCRead->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NFCRead))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-03-13 16:06:04 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'sparcExp', 3306, '', 0)
+#1 C:\wamp64\www\oilid\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\wamp64\www\oilid\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\wamp64\www\oilid\app\Controllers\User.php(22): CodeIgniter\Database\BaseConnection->query('SHOW TABLES LIK...')
+#4 C:\wamp64\www\oilid\system\CodeIgniter.php(933): App\Controllers\User->index()
+#5 C:\wamp64\www\oilid\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\wamp64\www\oilid\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\oilid\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\oilid\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\oilid\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\wamp64\www\oilid\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\wamp64\www\oilid\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\oilid\app\Controllers\User.php(22): CodeIgniter\Database\BaseConnection->query('SHOW TABLES LIK...')
+#3 C:\wamp64\www\oilid\system\CodeIgniter.php(933): App\Controllers\User->index()
+#4 C:\wamp64\www\oilid\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\wamp64\www\oilid\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\oilid\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#7 C:\wamp64\www\oilid\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#8 C:\wamp64\www\oilid\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#9 {main}
+CRITICAL - 2025-03-13 16:06:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: user]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\User.php(22): CodeIgniter\Database\BaseConnection->query('SHOW TABLES LIKE \'area%\'')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-03-13 16:34:50 --> mysqli_sql_exception: Unknown column 'serialNumber' in 'field list' in C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `tmpnfc`...', 0)
+#1 C:\wamp64\www\oilid\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tmpnfc`...')
+#2 C:\wamp64\www\oilid\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tmpnfc`...')
+#3 C:\wamp64\www\oilid\system\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `tmpnfc`...', Array, false)
+#4 C:\wamp64\www\oilid\app\Controllers\NFCRead.php(36): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\wamp64\www\oilid\system\CodeIgniter.php(933): App\Controllers\NFCRead->receive()
+#6 C:\wamp64\www\oilid\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NFCRead))
+#7 C:\wamp64\www\oilid\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\oilid\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\oilid\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\oilid\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-03-13 16:34:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'serialNumber' in 'field list'
+[Method: POST, Route: nfc-read/receive]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `tmpnfc` SET `serialNumber` = :serialNumber:
+WHERE `ID` = :ID:', [...], false)
+ 2 APPPATH\Controllers\NFCRead.php(36): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NFCRead->receive()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NFCRead))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-13 16:34:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'serialNumber' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tmpnfc` SET `serialNumber` = \'d3:ff:a8:19\'
+WHERE `ID` = 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tmpnfc` SET `serialNumber` = \'d3:ff:a8:19\'
+WHERE `ID` = 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `tmpnfc` SET `serialNumber` = :serialNumber:
+WHERE `ID` = :ID:', [...], false)
+ 4 APPPATH\Controllers\NFCRead.php(36): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NFCRead->receive()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NFCRead))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-13 16:34:50 --> [Caused by] mysqli_sql_exception: Unknown column 'serialNumber' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `tmpnfc` SET `serialNumber` = \'d3:ff:a8:19\'
+WHERE `ID` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tmpnfc` SET `serialNumber` = \'d3:ff:a8:19\'
+WHERE `ID` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tmpnfc` SET `serialNumber` = \'d3:ff:a8:19\'
+WHERE `ID` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `tmpnfc` SET `serialNumber` = :serialNumber:
+WHERE `ID` = :ID:', [...], false)
+ 5 APPPATH\Controllers\NFCRead.php(36): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NFCRead->receive()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NFCRead))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

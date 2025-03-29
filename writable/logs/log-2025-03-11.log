@@ -1,0 +1,258 @@
+CRITICAL - 2025-03-11 06:12:10 --> ErrorException: Undefined array key "weldMetalNumber"
+[Method: GET, Route: record]
+in APPPATH\Views\record\index.php on line 74.
+ 1 APPPATH\Views\record\index.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "weldMetalNumber"', 'C:\\wamp64\\www\\oilid\\app\\Views\\record\\index.php', 74)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\record\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('record/index', [], true)
+ 5 APPPATH\Controllers\Record.php(36): view('record/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Record->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Record))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-11 15:56:07 --> ErrorException: Undefined array key "weldMetalNumber"
+[Method: GET, Route: record]
+in APPPATH\Views\record\index.php on line 74.
+ 1 APPPATH\Views\record\index.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "weldMetalNumber"', 'C:\\wamp64\\www\\oilid\\app\\Views\\record\\index.php', 74)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\oilid\\app\\Views\\record\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('record/index', [], true)
+ 5 APPPATH\Controllers\Record.php(36): view('record/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Record->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Record))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-03-11 16:06:16 --> mysqli_sql_exception: Unknown column 'j.jobNumber' in 'field list' in C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\oilid\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT \n       ...', 0)
+#1 C:\wamp64\www\oilid\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \n       ...')
+#2 C:\wamp64\www\oilid\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \n       ...')
+#3 C:\wamp64\www\oilid\app\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT \n       ...', Array)
+#4 C:\wamp64\www\oilid\system\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+#5 C:\wamp64\www\oilid\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+#6 C:\wamp64\www\oilid\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\oilid\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\oilid\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\oilid\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-03-11 16:06:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'j.jobNumber' in 'field list'
+[Method: GET, Route: monitoring/machineDetails/MACHINE-1]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        a.State,
+        j.jobRFID,
+        j.jobQR,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalQR,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = ?', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-11 16:06:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'j.jobNumber' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+        a.jobRFID,
+        a.State,
+        j.jobRFID,
+        j.jobQR,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalQR,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+        a.jobRFID,
+        a.State,
+        j.jobRFID,
+        j.jobQR,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalQR,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'')
+ 3 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        a.State,
+        j.jobRFID,
+        j.jobQR,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalQR,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = ?', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-11 16:06:16 --> [Caused by] mysqli_sql_exception: Unknown column 'j.jobNumber' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT 
+        a.jobRFID,
+        a.State,
+        j.jobRFID,
+        j.jobQR,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalQR,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+        a.jobRFID,
+        a.State,
+        j.jobRFID,
+        j.jobQR,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalQR,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+        a.jobRFID,
+        a.State,
+        j.jobRFID,
+        j.jobQR,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalQR,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = \'MACHINE-1\'')
+ 4 APPPATH\Controllers\Monitoring.php(77): CodeIgniter\Database\BaseConnection->query('SELECT 
+        a.jobRFID,
+        a.State,
+        j.jobRFID,
+        j.jobQR,
+        j.jobNumber,
+        j.jobName,
+        j.jobDescription,
+        a.weldMetalRFID,
+        w.weldMetalRFID,
+        w.weldMetalNumber,
+        w.weldMetalName,
+        w.weldMetalQR,
+        w.weldMetalCertNumber,
+        w.weldMetalDescription,
+        a.userRFID,
+        e.cardUID,
+        e.Name,
+        e.welder_image
+    FROM area1 AS a
+    LEFT JOIN tjobdata AS j ON a.jobRFID = j.jobRFID
+    LEFT JOIN tweldmetaldata AS w ON a.weldMetalRFID = w.weldMetalRFID
+    LEFT JOIN employee AS e ON a.userRFID = e.cardUID
+    WHERE a.MachineID = ?', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->machineDetails('MACHINE-1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
