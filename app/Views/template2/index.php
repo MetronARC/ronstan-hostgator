@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="<?= base_url(); ?>/img/Logo.png" />
+    <link rel="icon" type="image/svg+xml" href="<?= base_url(); ?>img/Logo.png" />
     <!-- Material Icon -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="<?= base_url(); ?>css/style.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>css/monitoring.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <link
@@ -29,12 +29,24 @@
     </style>
     <title><?= $title ?></title>
     <style>
+        /* Additional styles for the dropdown */
+        .machine-input,
+        .date-input {
+            border: 1px solid #ccc;
+            padding: 10px;
+            /* Increased padding for more height */
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+            /* Ensures padding is included in width */
+        }
+
         /* Button styling */
         #fetch-data {
             display: inline-block;
             padding: 10px 20px;
             color: white;
-            background-color: var(--color-primary);
+            background-color: #007bff;
             text-decoration: none;
             border-radius: 5px;
             cursor: pointer;
@@ -66,7 +78,7 @@
             z-index: 10;
             /* Ensure it appears above other elements */
             padding: 5px 10px;
-            background-color: #7380ec;
+            background-color: #007bff;
             color: white;
             border: none;
             border-radius: 5px;
@@ -96,11 +108,18 @@
             right: 110px;
             /* Adjust to position it correctly */
         }
+        .datetime-input {
+            border: 1px solid #ccc;
+            padding: 7px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" data-aos="zoom-out">
         <!-- SIDEBAR -->
         <?= $this->include('template2/sidebar') ?>
         <!-- END OF SIDEBAR -->

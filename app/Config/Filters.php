@@ -34,9 +34,6 @@ class Filters extends BaseFilters
         'forcehttps'    => ForceHTTPS::class,
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
-        'login'         => \Myth\Auth\Filters\LoginFilter::class,
-        'role'          => \Myth\Auth\Filters\RoleFilter::class,
-        'permission'    => \Myth\Auth\Filters\PermissionFilter::class,
     ];
 
     /**
@@ -75,20 +72,12 @@ class Filters extends BaseFilters
             // 'honeypot',
             // 'csrf',
             // 'invalidchars',
-            'login' => ['except' => [
-                'API/updateLastSeen',
-                'API/updateWeldID',
-                'API/insertHeartBeat',
-                'API/handleArea',
-                'API/updateMachineData',
-            ]],
         ],
         'after' => [
             // 'honeypot',
             // 'secureheaders',
         ],
     ];
-
 
     /**
      * List of filter aliases that works on a
@@ -114,9 +103,5 @@ class Filters extends BaseFilters
      *
      * @var array<string, array<string, list<string>>>
      */
-    public array $filters = [
-        'login' => ['before' => ['account/*', 'profiles/*']],
-        'role' => ['before' => ['admin/*']],
-        'permission' => ['before' => ['admin/*']],
-    ];
+    public array $filters = [];
 }

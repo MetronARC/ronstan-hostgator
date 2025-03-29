@@ -1,4 +1,4 @@
-<?= $this->extend('Auth/templates/index'); ?>
+<?= $this->extend('auth/templates/index'); ?>
 
 <?= $this->section('content'); ?>
 

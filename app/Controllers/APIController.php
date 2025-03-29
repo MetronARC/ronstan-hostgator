@@ -53,15 +53,22 @@ class APIController extends BaseController
         // Begin transaction  
         $db->transStart();
 
-        // Update the lastSeen column in the machine table  
-        $machineBuilder = $db->table('machine');
         try {
+            // Update the lastSeen column in the machine table  
+            $machineBuilder = $db->table('machine');
             $machineBuilder->where('MachineID', $machineID)
                 ->update(['lastSeen' => $currentDateTime]);
 
-            // Commit the transaction if the update is successful  
+            // Update the lastBeat column in the heartbeattable based on WeldID
+            $heartbeatBuilder = $db->table('heartbeattable');
+            $heartbeatBuilder->where('WeldID', $WeldID)
+                ->update(['lastBeat' => $currentDateTime]);
+
+            // Commit the transaction if both operations are successful  
             if ($db->transComplete()) {
-                return $this->response->setStatusCode(200)->setBody(json_encode(["message" => "lastSeen updated successfully."]));
+                return $this->response->setStatusCode(200)->setBody(json_encode([
+                    "message" => "lastSeen and heartbeat records updated successfully."
+                ]));
             } else {
                 // Get the last error and query  
                 $error = $db->error();
@@ -210,21 +217,6 @@ class APIController extends BaseController
             // Load the database service
             $db = \Config\Database::connect();
 
-            // Function to get employee name by UID
-            function getEmployeeName($db, $UID)
-            {
-                $employeeBuilder = $db->table('employee');
-                $query = $employeeBuilder->select('Name')->where('cardUID', $UID)->get();
-
-                if ($query->getNumRows() > 0) {
-                    $row = $query->getRow();
-                    return $row->Name;
-                }
-                return ''; // Return empty string if no data found
-            }
-
-            $name = getEmployeeName($db, $UID);
-
             // Set timezone and get current date and time
             date_default_timezone_set('Asia/Jakarta');
             $date = date('Y-m-d');
@@ -255,12 +247,10 @@ class APIController extends BaseController
                         $areaBuilder->insert([
                             'Area'      => $area,
                             'UID'       => $UID,
-                            'Status'    => $status,
                             'Mode'      => $mode,
                             'MachineID' => $machineID,
                             'WeldID'    => $weldID,
-                            'Date'      => $date,
-                            'Name'      => $name
+                            'Date'      => $date
                         ]);
                         log_message('debug', "Insert on Inactive: $machineID");
                         return $this->response->setStatusCode(200)->setBody("Query executed successfully: Insert on Inactive");
@@ -270,9 +260,7 @@ class APIController extends BaseController
                     $areaBuilder = $db->table($areaTable);
                     $areaBuilder->where('MachineID', $machineID)
                         ->update([
-                            'Name'      => $name,
                             'UID'       => $UID,
-                            'Status'    => $status,
                             'Mode'      => $mode,
                             'WeldID'    => $weldID,
                             'Date'      => $date,
@@ -292,50 +280,6 @@ class APIController extends BaseController
                             ->update(['Logout' => $time]);
                         log_message('debug', "Logout mode: $machineID");
                         return $this->response->setStatusCode(200)->setBody("Query executed successfully: Logout mode");
-                    }
-                } elseif ($status == "Done") {
-                    // Handle 'Done' status
-                    $areaBuilder = $db->table($areaTable);
-                    $weldIDQuery = $areaBuilder->select('WeldID')
-                        ->where('MachineID', $machineID)
-                        ->get();
-
-                    if ($weldIDQuery->getNumRows() > 0) {
-                        $weldIDRow = $weldIDQuery->getRow();
-                        $weldID = $weldIDRow->WeldID;
-
-                        // Delete data from the area
-                        $areaBuilder->where('MachineID', $machineID)->delete();
-                        log_message('debug', "Delete on Done: $machineID");
-
-                        // Increment WeldID in the machine table
-                        $machineBuilder = $db->table('machine');
-                        $machineBuilder->where('MachineID', $machineID)
-                            ->set('WeldID', 'WeldID + 1', false)
-                            ->update();
-                        log_message('debug', "Increment WeldID: $machineID");
-
-                        // Calculate the total ArcTime from machinehistory1
-                        $historyBuilder = $db->table('machinehistory1');
-                        $arcTotalQuery = $historyBuilder->select('SEC_TO_TIME(SUM(TIME_TO_SEC(ArcTotal))) AS totalArcTime')
-                            ->where('WeldID', $weldID)
-                            ->get();
-
-                        if ($arcTotalQuery->getNumRows() > 0) {
-                            $totalArcTime = $arcTotalQuery->getRow()->totalArcTime;
-
-                            // Update the corresponding row with the calculated totalArcTime
-                            $areaBuilder->where('WeldID', $weldID)
-                                ->update(['upTime' => $totalArcTime]);
-                            log_message('debug', "Update totalArcTime: $weldID");
-                            return $this->response->setStatusCode(200)->setBody("Query executed successfully: Update totalArcTime");
-                        } else {
-                            log_message('error', "Error calculating total ArcTime for WeldID: $weldID");
-                            return $this->response->setStatusCode(500)->setBody("Error calculating total ArcTime.");
-                        }
-                    } else {
-                        log_message('error', "Error retrieving WeldID for MachineID: $machineID");
-                        return $this->response->setStatusCode(500)->setBody("Error retrieving WeldID.");
                     }
                 }
             } else {
@@ -513,5 +457,104 @@ class APIController extends BaseController
         }
 
         return $this->response->setStatusCode(400)->setBody('Invalid Area or Status provided');
+    }
+
+    public function qrRFIDData()
+    {
+        // Retrieve the GET parameters
+        $scanStatus = $this->request->getGet('scanType');
+        $qrData = $this->request->getGet('qrData');
+        $rfidData = $this->request->getGet('rfidData');
+        $apiKey = $this->request->getGet('apiKey');
+
+        if ($apiKey !== $this->apiKey) {
+            return $this->response->setStatusCode(403)->setBody("API key invalid.");
+        }
+
+        // Set the timezone to Asia/Jakarta
+        date_default_timezone_set('Asia/Jakarta');
+
+        // Get the current date and time in DATETIME format
+        $currentDateTime = date("Y-m-d H:i:s");
+
+        // Load the database service
+        $db = \Config\Database::connect();
+        $builder = $db->table('tmpdata');
+
+        // Prepare update data
+        $updateData = [];
+        if (!empty($qrData)) {
+            $updateData['tmpQR'] = $qrData;
+        }
+        if (!empty($rfidData)) {
+            $updateData['tmpRFID'] = $rfidData;
+        }
+        if (empty($updateData)) {
+            return $this->response->setStatusCode(400)->setBody("No valid data to update.");
+        }
+
+        $updateData['updated_at'] = $currentDateTime;
+
+        // Update the table based on scanStatus
+        if ($scanStatus === "jobScan" || $scanStatus === "weldMetalScan") {
+            $builder->where('scanType', $scanStatus)
+                ->update($updateData);
+
+            if ($db->affectedRows() > 0) {
+                return $this->response->setStatusCode(200)->setBody("Data updated successfully.");
+            } else {
+                return $this->response->setStatusCode(404)->setBody("No matching records found to update.");
+            }
+        }
+
+        return $this->response->setStatusCode(400)->setBody("Invalid scan status.");
+    }
+
+    public function handleRFID()
+    {
+        $status = $this->request->getGet('Status');
+        $machineID = $this->request->getGet('MachineID');
+        $area = $this->request->getGet('Area');
+        $jobData = $this->request->getGet('jobData');
+        $weldMetalData = $this->request->getGet('weldMetalData');
+        $userRFIDData = $this->request->getGet('userRFIDData');
+        $apiKey = $this->request->getGet('apiKey');
+
+        if ($apiKey !== $this->apiKey) {
+            return $this->response->setStatusCode(403)->setBody("API key invalid.");
+        }
+
+        if (!in_array($area, ["1", "2", "3", "4", "5"])) {
+            return $this->response->setStatusCode(400)->setBody("Invalid area!");
+        }
+
+        $areaTable = 'area' . $area;
+        $db = \Config\Database::connect();
+        $builder = $db->table($areaTable);
+
+        switch ($status) {
+            case "jobScan":
+                $updateData = ['jobRFID' => $jobData];
+                break;
+            case "weldMetalScan":
+                $updateData = ['weldMetalRFID' => $weldMetalData];
+                break;
+            case "userScan":
+                $updateData = ['userRFID' => $userRFIDData];
+                break;
+            case "rfidDone":
+                $updateData = ['State' => 'INSPECT'];
+                break;
+            default:
+                return $this->response->setStatusCode(400)->setBody("Invalid status!");
+        }
+
+        $builder->where('MachineID', $machineID)->update($updateData);
+
+        if ($db->affectedRows() > 0) {
+            return $this->response->setStatusCode(200)->setBody("Update successful.");
+        } else {
+            return $this->response->setStatusCode(404)->setBody("No records updated. MachineID may not exist.");
+        }
     }
 }
