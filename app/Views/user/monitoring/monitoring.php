@@ -1,102 +1,58 @@
-<?= $this->extend('template2/index') ?>
+<?= $this->extend('template/index') ?>
 <?= $this->section('page-content') ?>
 
-<h1>Dashboard</h1>
+<main>
+    <h1>Dashboard</h1>
 
-<div class="date"></div>
+    <div class="date"></div>
 
-<div class="insights">
-    <?php foreach ($areas as $area): ?>
-        <div class="sales">
-            <span class="material-symbols-outlined">zoom_in_map</span>
-            <a href="<?= base_url('monitoring/activeMachine/' . $area['areaID']); ?>">
+    <div class="insights">
+        <?php foreach ($areas as $area): ?>
+            <!-- ACTIVE AREA -->
+            <div class="sales">
+                <span class="material-symbols-outlined">zoom_in_map</span>
                 <div class="middle">
                     <div class="left">
-                        <h3><?= $area['areaName'] ?></h3>
-                        <div class="machine-states" id="machine-states-<?= $area['areaID'] ?>">
-                            <?php foreach ($area['machines'] as $machine): ?>
-                                <span class="material-symbols-outlined" style="background: <?= $machine['State'] === 'ON' ? 'green' : ($machine['State'] === 'IDLE' ? 'yellow' : 'red') ?>; width: 30px; height: 30px; margin-right: 15px"></span>
-                            <?php endforeach; ?>
-                        </div>
+                        <h3><?= $area['name'] ?></h3>
+                        <h2 id="activeMachineCount">Active Machine: <?= $area['rowCount'] ?></h2>
                     </div>
+                    <a href="<?= base_url('monitoring/activeMachine/' . $area['name']); ?>">
+                        <div class="progress">
+                            <svg>
+                                <circle cx="42" cy="42" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <h3>View</h3>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
-    <?php endforeach; ?>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    function fetchMachineStates(areaId) {
-        $.ajax({
-            url: '<?= base_url('monitoring/getMachineState/') ?>' + areaId,
-            method: 'GET',
-            success: function(response) {
-                if (!response.success) {
-                    console.error('Error fetching machine states for area:', areaId);
-                    return;
-                }
-
-                const machineStatesContainer = $('#machine-states-' + areaId);
-                if (!machineStatesContainer.length) return;
-                
-                machineStatesContainer.empty();
-
-                response.data.forEach(function(machine) {
-                    let stateColor;
-                    switch (machine.State) {
-                        case 'ON':
-                            stateColor = 'green';
-                            break;
-                        case 'IDLE':
-                            stateColor = 'yellow';
-                            break;
-                        case 'INSPECT':
-                            stateColor = 'orange';
-                            break;
-                        default:
-                            stateColor = 'gray';
-                    }
-
-                    machineStatesContainer.append('<span class="material-symbols-outlined" style="background: ' + stateColor + '; width: 30px; height: 30px; margin-right: 15px"></span>');
-                });
-            },
-            error: function(xhr, status, error) {
-                console.error('AJAX error for area:', areaId, error);
-            }
-        });
-    }
-
-    // Store interval IDs for each area
-    const intervalIds = {};
-
-    // Function to start monitoring for an area
-    function startMonitoring(areaId) {
-        // Clear any existing interval for this area
-        if (intervalIds[areaId]) {
-            clearInterval(intervalIds[areaId]);
-        }
-
-        // Initial fetch
-        fetchMachineStates(areaId);
-
-        // Set up new interval
-        intervalIds[areaId] = setInterval(function() {
-            fetchMachineStates(areaId);
-        }, 1000);
-    }
-
-    // Start monitoring for each area when the page loads
-    $(document).ready(function() {
-        <?php foreach ($areas as $area): ?>
-            startMonitoring('<?= $area['areaID'] ?>');
+            </div>
+            <!-- END OF ACTIVE AREA -->
         <?php endforeach; ?>
-    });
+    </div>
+    <!-- END OF INSIGHTS -->
+</main>
 
-    // Clean up intervals when leaving the page
-    $(window).on('unload', function() {
-        Object.values(intervalIds).forEach(clearInterval);
-    });
-</script>
+<div class="right">
+    <div class="top">
+        <button id="menu-btn">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+        <div class="theme-toggler">
+            <span class="lni lni-sun"></span>
+            <span class="fa-regular fa-moon"></span>
+        </div>
+        <div class="profile">
+            <div class="info">
+                <p>Hey, <b>Ronstan</b></p>
+                <small class="text-muted">Admin</small>
+            </div>
+            <div class="profile-photo">
+                <a href="Machine/Machine.php"><img src="<?= base_url(); ?>img/Logo.png" alt="AdminLogo"></a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <?= $this->endSection() ?>

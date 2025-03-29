@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
-<body style="background: url('<?= base_url(); ?>/img/hero-bg.jpg') center / cover no-repeat;" data-aos="zoom-out">
+<body style="background: url('<?= base_url(); ?>/img/hero-bg.png') center / cover no-repeat;" data-aos="zoom-out">
 
     <!-- Navigation Bar -->
     <header>

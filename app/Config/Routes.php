@@ -15,10 +15,6 @@ $routes->get('API/updateWeldID', 'APIController::updateWeldID');
 $routes->get('API/insertHeartBeat', 'APIController::insertHeartbeat');
 $routes->get('API/handleArea', 'APIController::handleArea');
 $routes->get('API/updateMachineData', 'APIController::updateMachineData');
-$routes->get('API/handleScan', 'APIController::qrRFIDData');
-$routes->get('API/handleRFID', 'APIController::handleRFID');
-$routes->post('record/insertProject', 'Record::insertProject');
-$routes->post('record/insertWeldMetal', 'Record::insertWeldMetal');
-$routes->get('nfc/read', 'NFCRead::index');
-$routes->post('nfc-read/receive', 'NFCRead::receive');
+$routes->post('recap/fetchChartData', 'Recap::fetchChartData');
+
 $routes->setAutoRoute(true);

@@ -12,23 +12,24 @@ class Monitoring extends BaseController
         $db = \Config\Database::connect();
 
         try {
-            // Query to get all rows from tarea table
-            $query = $db->query("SELECT * FROM tarea");
-            $areas = $query->getResultArray();
+            // Query to get all tables with the prefix "area"
+            $query = $db->query("SHOW TABLES LIKE 'area%'");
+            $tables = $query->getResultArray();
 
             // Initialize an array to store area data
             $areaData = [];
 
-            foreach ($areas as $area) {
-                // Fetch the machine states for this area
-                $machineStateQuery = $db->query("SELECT State FROM machine WHERE areaID = ?", [$area['areaID']]);
-                $machineStates = $machineStateQuery->getResultArray();
+            foreach ($tables as $table) {
+                $tableName = array_values($table)[0]; // Get the table name
 
-                // Add the area data and machine states to the areaData array
+                // Count the rows in the current table
+                $rowCountQuery = $db->query("SELECT COUNT(*) as total FROM `$tableName` WHERE State = 'ON'");
+                $rowCount = $rowCountQuery->getRow()->total;
+
+                // Add the table name and row count to the areaData array
                 $areaData[] = [
-                    'areaID' => $area['areaID'],
-                    'areaName' => $area['areaName'],
-                    'machines' => $machineStates
+                    'name' => $tableName,
+                    'rowCount' => $rowCount
                 ];
             }
 
@@ -45,185 +46,40 @@ class Monitoring extends BaseController
         return view('user/monitoring/monitoring', $data);
     }
 
-
-    public function activeMachine($areaId): string
+    public function activeMachine($areaName): string
     {
         $db = \Config\Database::connect();
 
-        // Get area name
-        $areaQuery = $db->query("SELECT areaName FROM tarea WHERE areaID = ?", [$areaId]);
-        $area = $areaQuery->getRow();
-
-        // Fetch machines for this area
-        $query = $db->query("SELECT * FROM machine WHERE areaID = ?", [$areaId]);
+        // Fetch data from the table with the name passed in the URL (e.g., "area1")
+        $query = $db->query("SELECT * FROM `$areaName`");
         $results = $query->getResultArray();
 
         // Prepare data for the view
         $data['title'] = 'Active Machine Page';
         $data['sidebarData'] = 'monitoring';
-        $data['areaName'] = $area->areaName;
-        $data['areaId'] = $areaId;
+        $data['areaName'] = $areaName;
         $data['machines'] = $results;
 
         return view('user/monitoring/activeMachine', $data);
     }
 
-    public function machineDetails($machineId): string
+    public function getMachineState($areaName)
     {
         $db = \Config\Database::connect();
 
-        try {
-            // Fetch machine details
-            $query = $db->query("SELECT 
-                m.MachineID as machineId,
-                m.State,
-                m.lastBeat,
-                j.jobRFID,
-                j.jobQR,
-                j.job_number,
-                j.job_name,
-                j.job_description,
-                w.weldMetalRFID,
-                w.weldMetal_batchNumber,
-                w.weldMetal_material,
-                w.weldMetalQR,
-                w.weldMetal_certNo,
-                e.cardUID,
-                e.Name,
-                e.welder_image
-            FROM machine m
-            LEFT JOIN tjobdata j ON m.job_rfid = j.jobRFID
-            LEFT JOIN tweldmetaldata w ON m.weld_metal_rfid = w.weldMetalRFID
-            LEFT JOIN employee e ON m.user_rfid = e.cardUID
-            WHERE m.MachineID = ?", [$machineId]);
+        // Fetch only the necessary fields to reduce payload size
+        $query = $db->query("SELECT MachineID, lastBeat, State FROM `$areaName`");
+        $results = $query->getResultArray();
 
-            $results = $query->getResultArray();
-
-            if (empty($results)) {
-                return 'Machine not found';
+        // Format the lastBeat field for each result
+        foreach ($results as &$result) {
+            if (!empty($result['lastBeat'])) {
+                $dateTime = new \DateTime($result['lastBeat']);
+                $result['lastBeat'] = $dateTime->format('d-m-Y H:i:s');
             }
-
-            // Prepare data for the view
-            $data = [
-                'title' => 'Active Machine Page',
-                'sidebarData' => 'monitoring',
-                'machineId' => $machineId,
-                'machines' => $results,
-            ];
-
-            return view('user/monitoring/machineDetails', $data);
-
-        } catch (\Exception $e) {
-            return 'Error loading machine details';
         }
-    }
 
-    public function getArcTotal($machineId)
-    {
-        $db = \Config\Database::connect();
-
-        try {
-            // Fetch WeldID for the given machine
-            $queryWeldID = $db->query("SELECT WeldID FROM machine WHERE id = ?", [$machineId]);
-            $resultWeldID = $queryWeldID->getRowArray();
-
-            if ($resultWeldID) {
-                $weldID = $resultWeldID['WeldID'];
-
-                // Fetch SUM of ArcTotal (TIME format)
-                $queryArcTotal = $db->query("SELECT SEC_TO_TIME(SUM(TIME_TO_SEC(ArcTotal))) AS TotalArcTime FROM machinehistory WHERE WeldID = ?", [$weldID]);
-                $arcTotal = $queryArcTotal->getRowArray();
-            } else {
-                $arcTotal = ['TotalArcTime' => '00:00:00']; // Default if no data found
-            }
-
-            return $this->response->setJSON(['arcTotal' => $arcTotal['TotalArcTime']]);
-
-        } catch (\Exception $e) {
-            return $this->response->setJSON(['arcTotal' => '00:00:00']);
-        }
-    }
-
-    public function getMachineState($areaId)
-    {
-        $db = \Config\Database::connect();
-
-        try {
-            // Validate areaId
-            if (empty($areaId)) {
-                return $this->response->setStatusCode(400)->setJSON([
-                    'success' => false
-                ]);
-            }
-
-            // Check if area exists
-            $areaCheck = $db->query("SELECT areaID FROM tarea WHERE areaID = ?", [$areaId]);
-            if ($areaCheck->getNumRows() === 0) {
-                return $this->response->setStatusCode(404)->setJSON([
-                    'success' => false
-                ]);
-            }
-
-            // Fetch only the necessary fields to reduce payload size
-            $query = $db->query("SELECT MachineID, lastBeat, State FROM machine WHERE areaID = ?", [$areaId]);
-            
-            if (!$query) {
-                return $this->response->setStatusCode(500)->setJSON([
-                    'success' => false
-                ]);
-            }
-
-            $results = $query->getResultArray();
-
-            // Return JSON response
-            return $this->response->setJSON([
-                'success' => true,
-                'data' => $results
-            ]);
-
-        } catch (\Exception $e) {
-            return $this->response->setStatusCode(500)->setJSON([
-                'success' => false
-            ]);
-        }
-    }
-
-    public function getMachineStateDetails($machineId)
-    {
-        $db = \Config\Database::connect();
-
-        try {
-            // Validate machineId
-            if (!is_numeric($machineId)) {
-                log_message('error', "Invalid machine ID format: {$machineId}");
-                return $this->response->setStatusCode(400)->setJSON([
-                    'success' => false
-                ]);
-            }
-
-            // Fetch only the necessary fields to reduce payload size
-            $query = $db->query("SELECT id, lastBeat, State FROM machine WHERE id = ?", [$machineId]);
-            
-            if (!$query) {
-                log_message('error', "Database query failed for machine {$machineId}: " . json_encode($db->error()));
-                return $this->response->setStatusCode(500)->setJSON([
-                    'success' => false
-                ]);
-            }
-
-            $results = $query->getResultArray();
-            log_message('debug', "Fetched machine state for machine {$machineId}: " . json_encode($results));
-
-            return $this->response->setJSON([
-                'success' => true,
-                'data' => $results
-            ]);
-
-        } catch (\Exception $e) {
-            log_message('error', "Error in getMachineStateDetails for machine {$machineId}: " . $e->getMessage());
-            return $this->response->setStatusCode(500)->setJSON([
-                'success' => false
-            ]);
-        }
+        // Return JSON response without specifying the return type as string
+        return $this->response->setJSON($results);
     }
 }
