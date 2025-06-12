@@ -1,0 +1,110 @@
+CRITICAL - 2025-01-12 22:25:09 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: API/updateMachineData]
+in APPPATH\Controllers\APIController.php on line 444.
+ 1 APPPATH\Controllers\APIController.php(444): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\ronstan\\app\\Controllers\\APIController.php', 444)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->updateMachineData()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-12 22:25:49 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: API/updateMachineData]
+in APPPATH\Controllers\APIController.php on line 444.
+ 1 APPPATH\Controllers\APIController.php(444): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\ronstan\\app\\Controllers\\APIController.php', 444)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->updateMachineData()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-12 22:29:09 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: API/updateMachineData]
+in APPPATH\Controllers\APIController.php on line 444.
+ 1 APPPATH\Controllers\APIController.php(444): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\ronstan\\app\\Controllers\\APIController.php', 444)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->updateMachineData()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-12 22:29:16 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: API/updateMachineData]
+in APPPATH\Controllers\APIController.php on line 444.
+ 1 APPPATH\Controllers\APIController.php(444): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\ronstan\\app\\Controllers\\APIController.php', 444)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->updateMachineData()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-12 22:29:31 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: API/updateMachineData]
+in APPPATH\Controllers\APIController.php on line 444.
+ 1 APPPATH\Controllers\APIController.php(444): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\ronstan\\app\\Controllers\\APIController.php', 444)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->updateMachineData()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-12 22:29:40 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: API/updateMachineData]
+in APPPATH\Controllers\APIController.php on line 444.
+ 1 APPPATH\Controllers\APIController.php(444): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\ronstan\\app\\Controllers\\APIController.php', 444)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->updateMachineData()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-12 22:31:55 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: API/updateMachineData]
+in APPPATH\Controllers\APIController.php on line 444.
+ 1 APPPATH\Controllers\APIController.php(444): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\ronstan\\app\\Controllers\\APIController.php', 444)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->updateMachineData()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-12 22:32:52 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: API/updateMachineData]
+in APPPATH\Controllers\APIController.php on line 444.
+ 1 APPPATH\Controllers\APIController.php(444): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\ronstan\\app\\Controllers\\APIController.php', 444)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->updateMachineData()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-12 22:33:54 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: API/updateMachineData]
+in APPPATH\Controllers\APIController.php on line 444.
+ 1 APPPATH\Controllers\APIController.php(444): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\ronstan\\app\\Controllers\\APIController.php', 444)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->updateMachineData()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-12 22:34:16 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: API/updateMachineData]
+in APPPATH\Controllers\APIController.php on line 439.
+ 1 APPPATH\Controllers\APIController.php(439): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\ronstan\\app\\Controllers\\APIController.php', 439)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->updateMachineData()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-12 22:37:47 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: API/updateMachineData]
+in APPPATH\Controllers\APIController.php on line 439.
+ 1 APPPATH\Controllers\APIController.php(439): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\ronstan\\app\\Controllers\\APIController.php', 439)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->updateMachineData()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

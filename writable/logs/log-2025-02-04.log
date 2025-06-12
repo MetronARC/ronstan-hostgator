@@ -1,0 +1,1107 @@
+CRITICAL - 2025-02-04 06:34:34 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:34:34 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:34:35 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:34:37 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:34:38 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:34:40 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:34:41 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:34:42 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:34:43 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:34:44 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:34:45 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:34:46 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:34:47 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:34:48 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:34:48 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:34:49 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:34:50 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:34:51 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:34:53 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:34:54 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:34:55 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:34:56 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:34:57 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:34:58 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:34:59 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:00 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:01 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:02 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:03 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:04 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:05 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:06 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:07 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:08 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:09 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:10 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:11 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:12 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:13 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:14 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:15 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:16 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:17 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:18 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:19 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:20 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:21 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:22 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:23 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:24 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:25 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:26 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:27 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:28 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:29 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:30 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:31 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:32 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:33 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:34 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:35 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:36 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:37 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:38 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:39 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:40 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:41 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:42 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:43 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:44 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:45 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:46 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:47 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:48 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:49 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:50 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:35:51 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:19 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:19 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:20 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:21 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:22 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:23 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:24 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:25 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:26 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:27 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:28 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:29 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:30 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:31 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:32 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:33 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:34 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:35 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:36 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:37 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:38 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:39 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:40 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:42 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:43 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:44 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:45 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:46 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:47 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:48 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:48 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:49 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:50 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:51 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:52 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:53 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:54 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:55 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:56 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:57 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:58 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:36:59 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:37:00 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:37:01 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:37:03 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:37:04 --> Error: Class "App\Controllers\DateTime" not found
+[Method: GET, Route: monitoring/getMachineState/area1]
+in APPPATH\Controllers\Monitoring.php on line 76.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->getMachineState('area1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

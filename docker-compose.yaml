@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  web:
+    image: ricoroenaldo94/sparc-ci4  # Use the existing image instead of building
+    container_name: ci4_app
+    platform: linux/arm64
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    environment:
+      - CI_ENVIRONMENT=development
+      - database.default.hostname=db
+      - database.default.database=ci4login
+      - database.default.username=ci4_user
+      - database.default.password=ci4_password
+      - database.default.DBDriver=MySQLi
+      - database.default.DBPrefix=
+      - database.default.port=3306
+    restart: always
+
+  db:
+    build:
+      context: .  # Build from the project root
+      dockerfile: Dockerfile.mysql  # Use the custom Dockerfile
+    container_name: ci4_db
+    platform: linux/arm64  # Ensure it's ARM-compatible
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ci4login
+      MYSQL_USER: ci4_user
+      MYSQL_PASSWORD: ci4_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql  # Keep database data persistent
+
+volumes:
+  db_data:

@@ -1,0 +1,14 @@
+CRITICAL - 2025-01-09 06:25:45 --> ErrorException: Undefined array key "lastBeat"
+[Method: GET, Route: monitoring/activeMachine/Machine/Machine.php]
+in APPPATH\Views\user\monitoring\activeMachine.php on line 14.
+ 1 APPPATH\Views\user\monitoring\activeMachine.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "lastBeat"', 'C:\\xampp\\htdocs\\sparcRonstanCI4\\app\\Views\\user\\monitoring\\activeMachine.php', 14)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sparcRonstanCI4\\app\\Views\\user\\monitoring\\activeMachine.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('user/monitoring/activeMachine', [], true)
+ 5 APPPATH\Controllers\Monitoring.php(63): view('user/monitoring/activeMachine', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Monitoring->activeMachine('Machine', 'Machine.php')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Monitoring))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

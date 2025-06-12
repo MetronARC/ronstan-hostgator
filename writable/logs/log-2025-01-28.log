@@ -1,0 +1,28 @@
+CRITICAL - 2025-01-28 11:22:31 --> mysqli_sql_exception: Access denied for user 'u558841402_ronstan'@'localhost' (using password: YES)
+[Method: GET, Route: backup]
+in APPPATH\Views\backup\dailyBackup.php on line 33.
+ 1 APPPATH\Views\backup\dailyBackup.php(33): mysqli->__construct('localhost', 'u558841402_ronstan', Object(SensitiveParameterValue), 'u558841402_ronstandb')
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ronstan\\app\\Views\\backup\\dailyBackup.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('backup/dailyBackup', [], true)
+ 5 APPPATH\Controllers\Backup.php(9): view('backup/dailyBackup')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Backup->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Backup))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-28 11:22:55 --> mysqli_sql_exception: Access denied for user 'u558841402_ronstan'@'localhost' (using password: YES)
+[Method: GET, Route: backup]
+in APPPATH\Views\backup\dailyBackup.php on line 33.
+ 1 APPPATH\Views\backup\dailyBackup.php(33): mysqli->__construct('localhost', 'u558841402_ronstan', Object(SensitiveParameterValue), 'u558841402_ronstandb')
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ronstan\\app\\Views\\backup\\dailyBackup.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('backup/dailyBackup', [], true)
+ 5 APPPATH\Controllers\Backup.php(9): view('backup/dailyBackup')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Backup->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Backup))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

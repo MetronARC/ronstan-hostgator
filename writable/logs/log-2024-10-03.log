@@ -1,0 +1,551 @@
+ERROR - 2024-10-03 16:24:21 --> mysqli_sql_exception: Unknown column 'Date' in 'field list' in C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ar...', 0)
+#1 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ar...')
+#2 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ar...')
+#3 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ar...', Array, false)
+#4 C:\xampp\htdocs\firstci4\app\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+#6 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+#7 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\firstci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-03 16:24:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Date' in 'field list'
+[Method: GET, Route: API/handleArea]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 2 APPPATH\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-03 16:24:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 4 APPPATH\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-03 16:24:21 --> [Caused by] mysqli_sql_exception: Unknown column 'Date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 5 APPPATH\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-03 16:25:03 --> mysqli_sql_exception: Unknown column 'Date' in 'field list' in C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ar...', 0)
+#1 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ar...')
+#2 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ar...')
+#3 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ar...', Array, false)
+#4 C:\xampp\htdocs\firstci4\app\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+#6 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+#7 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\firstci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-03 16:25:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Date' in 'field list'
+[Method: GET, Route: API/handleArea]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 2 APPPATH\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-03 16:25:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 4 APPPATH\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-03 16:25:03 --> [Caused by] mysqli_sql_exception: Unknown column 'Date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 5 APPPATH\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-03 16:26:45 --> mysqli_sql_exception: Unknown column 'Date' in 'field list' in C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ar...', 0)
+#1 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ar...')
+#2 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ar...')
+#3 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ar...', Array, false)
+#4 C:\xampp\htdocs\firstci4\app\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+#6 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+#7 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\firstci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-03 16:26:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Date' in 'field list'
+[Method: GET, Route: API/handleArea]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 2 APPPATH\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-03 16:26:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 4 APPPATH\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-03 16:26:45 --> [Caused by] mysqli_sql_exception: Unknown column 'Date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 5 APPPATH\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-03 16:27:01 --> mysqli_sql_exception: Unknown column 'Date' in 'field list' in C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ar...', 0)
+#1 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ar...')
+#2 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ar...')
+#3 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ar...', Array, false)
+#4 C:\xampp\htdocs\firstci4\app\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+#6 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+#7 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\firstci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-03 16:27:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Date' in 'field list'
+[Method: GET, Route: API/handleArea]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 2 APPPATH\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-03 16:27:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 4 APPPATH\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-03 16:27:01 --> [Caused by] mysqli_sql_exception: Unknown column 'Date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 5 APPPATH\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-03 16:27:49 --> mysqli_sql_exception: Unknown column 'Date' in 'field list' in C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ar...', 0)
+#1 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ar...')
+#2 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ar...')
+#3 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ar...', Array, false)
+#4 C:\xampp\htdocs\firstci4\app\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+#6 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+#7 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\firstci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-03 16:27:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Date' in 'field list'
+[Method: GET, Route: API/handleArea]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 2 APPPATH\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-03 16:27:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', NULL, NULL, NULL, \'2024-10-03\', \'RONSTAN-1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', NULL, NULL, NULL, \'2024-10-03\', \'RONSTAN-1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 4 APPPATH\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-03 16:27:49 --> [Caused by] mysqli_sql_exception: Unknown column 'Date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', NULL, NULL, NULL, \'2024-10-03\', \'RONSTAN-1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', NULL, NULL, NULL, \'2024-10-03\', \'RONSTAN-1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', NULL, NULL, NULL, \'2024-10-03\', \'RONSTAN-1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 5 APPPATH\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-03 16:28:24 --> mysqli_sql_exception: Unknown column 'Date' in 'field list' in C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ar...', 0)
+#1 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ar...')
+#2 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ar...')
+#3 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ar...', Array, false)
+#4 C:\xampp\htdocs\firstci4\app\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+#6 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+#7 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\firstci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-03 16:28:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Date' in 'field list'
+[Method: GET, Route: API/handleArea]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 2 APPPATH\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-03 16:28:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', NULL, NULL, NULL, \'2024-10-03\', \'RONSTAN-1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', NULL, NULL, NULL, \'2024-10-03\', \'RONSTAN-1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 4 APPPATH\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-03 16:28:24 --> [Caused by] mysqli_sql_exception: Unknown column 'Date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', NULL, NULL, NULL, \'2024-10-03\', \'RONSTAN-1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', NULL, NULL, NULL, \'2024-10-03\', \'RONSTAN-1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', NULL, NULL, NULL, \'2024-10-03\', \'RONSTAN-1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 5 APPPATH\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-03 16:28:46 --> mysqli_sql_exception: Unknown column 'Date' in 'field list' in C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ar...', 0)
+#1 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ar...')
+#2 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ar...')
+#3 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ar...', Array, false)
+#4 C:\xampp\htdocs\firstci4\app\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+#6 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+#7 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\firstci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-03 16:28:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Date' in 'field list'
+[Method: GET, Route: API/handleArea]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 2 APPPATH\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-03 16:28:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', NULL, \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', NULL, \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 4 APPPATH\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-03 16:28:46 --> [Caused by] mysqli_sql_exception: Unknown column 'Date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', NULL, \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', NULL, \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', NULL, \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 5 APPPATH\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-03 16:31:01 --> mysqli_sql_exception: Unknown column 'Date' in 'field list' in C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ar...', 0)
+#1 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ar...')
+#2 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ar...')
+#3 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ar...', Array, false)
+#4 C:\xampp\htdocs\firstci4\app\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+#6 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+#7 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\firstci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-03 16:31:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Date' in 'field list'
+[Method: GET, Route: API/handleArea]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 2 APPPATH\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-03 16:31:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 4 APPPATH\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-03 16:31:01 --> [Caused by] mysqli_sql_exception: Unknown column 'Date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 5 APPPATH\Controllers\APIController.php(241): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2024-10-03 16:33:38 --> Area: 1, UID: RONSTAN-1, Status: Inactive, Mode: Login, MachineID: RONSTAN-1, WeldID: RONSTAN-1.1
+ERROR - 2024-10-03 16:33:38 --> mysqli_sql_exception: Unknown column 'Date' in 'field list' in C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ar...', 0)
+#1 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ar...')
+#2 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ar...')
+#3 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ar...', Array, false)
+#4 C:\xampp\htdocs\firstci4\app\Controllers\APIController.php(243): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+#6 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+#7 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\firstci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-03 16:33:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Date' in 'field list'
+[Method: GET, Route: API/handleArea]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 2 APPPATH\Controllers\APIController.php(243): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-03 16:33:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 4 APPPATH\Controllers\APIController.php(243): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-03 16:33:38 --> [Caused by] mysqli_sql_exception: Unknown column 'Date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 5 APPPATH\Controllers\APIController.php(243): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2024-10-03 16:33:44 --> Area: 1, UID: RONSTAN-1, Status: Inactive, Mode: Login, MachineID: RONSTAN-1, WeldID: RONSTAN-1.1
+ERROR - 2024-10-03 16:33:44 --> mysqli_sql_exception: Unknown column 'Date' in 'field list' in C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ar...', 0)
+#1 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ar...')
+#2 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ar...')
+#3 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ar...', Array, false)
+#4 C:\xampp\htdocs\firstci4\app\Controllers\APIController.php(243): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+#6 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+#7 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\firstci4\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\firstci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-03 16:33:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Date' in 'field list'
+[Method: GET, Route: API/handleArea]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 2 APPPATH\Controllers\APIController.php(243): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-03 16:33:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 4 APPPATH\Controllers\APIController.php(243): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-03 16:33:44 --> [Caused by] mysqli_sql_exception: Unknown column 'Date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (\'1\', \'RONSTAN-1\', \'Inactive\', \'Login\', \'RONSTAN-1\', \'RONSTAN-1.1\', \'2024-10-03\', \'RONSTAN-1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `area1` (`Area`, `UID`, `Status`, `Mode`, `MachineID`, `WeldID`, `Date`, `Name`) VALUES (:Area:, :UID:, :Status:, :Mode:, :MachineID:, :WeldID:, :Date:, :Name:)', [...], false)
+ 5 APPPATH\Controllers\APIController.php(243): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\APIController->handleArea()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2024-10-03 16:36:22 --> Area: 1, UID: RONSTAN-1, Status: Inactive, Mode: Login, MachineID: RONSTAN-1, WeldID: RONSTAN-1.1
+DEBUG - 2024-10-03 16:36:22 --> Insert on Inactive: RONSTAN-1
+DEBUG - 2024-10-03 16:37:16 --> Area: 1, UID: RONSTAN-1, Status: Inactive, Mode: Login, MachineID: RONSTAN-1, WeldID: RONSTAN-1.2
+DEBUG - 2024-10-03 16:37:16 --> Update on Inactive: RONSTAN-1
+DEBUG - 2024-10-03 16:37:36 --> Area: 1, UID: RONSTAN-1, Status: Active, Mode: Login, MachineID: RONSTAN-1, WeldID: RONSTAN-1.2
+DEBUG - 2024-10-03 16:37:36 --> Login mode: RONSTAN-1
+INFO - 2024-10-03 09:37:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:37:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:37:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:37:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:37:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:37:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:37:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:37:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-03 09:38:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

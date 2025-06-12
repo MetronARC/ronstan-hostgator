@@ -1,0 +1,4 @@
+FROM mysql:8.0
+
+# Copy the SQL file into the MySQL initialization folder
+COPY database/ci4login.sql /docker-entrypoint-initdb.d/

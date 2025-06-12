@@ -1,0 +1,14 @@
+ERROR - 2025-01-15 11:13:30 --> mysqli_sql_exception: Unknown column 'lastSeen' in 'field list' in C:\xampp\htdocs\ronstan\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\ronstan\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `heartbe...', 0)
+#1 C:\xampp\htdocs\ronstan\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `heartbe...')
+#2 C:\xampp\htdocs\ronstan\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `heartbe...')
+#3 C:\xampp\htdocs\ronstan\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `heartbe...', Array, false)
+#4 C:\xampp\htdocs\ronstan\app\Controllers\APIController.php(65): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\ronstan\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\APIController->updateLastSeen()
+#6 C:\xampp\htdocs\ronstan\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\APIController))
+#7 C:\xampp\htdocs\ronstan\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ronstan\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ronstan\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\ronstan\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
