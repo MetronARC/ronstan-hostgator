@@ -77,7 +77,6 @@ class AdditionalAPI extends BaseController
                     $areaBuilder = $db->table($tableArea);
                     $areaBuilder->where('MachineID', $MachineID)->update([
                         'State' => 'MAINTENANCE',
-                        'lastBeat' => $DateTime,
                         'WeldID' => $WeldID,
                         'Area' => $Area,
                         'UID' => $UID,
@@ -122,8 +121,7 @@ class AdditionalAPI extends BaseController
                         // Update the 'State' in area table to 'IDLE'
                         $areaBuilder = $db->table($tableArea);
                         $areaBuilder->where('MachineID', $MachineID)->update([
-                            'State' => 'IDLE',
-                            'lastBeat' => $DateTime
+                            
                         ]);
 
                         return $this->response->setBody('Data successfully updated for Maintenance Off');
@@ -154,7 +152,6 @@ class AdditionalAPI extends BaseController
                     $areaBuilder = $db->table($tableArea);
                     $areaBuilder->where('MachineID', $MachineID)->update([
                         'State' => 'TOOLING',
-                        'lastBeat' => $DateTime,
                         'WeldID' => $WeldID,
                         'Area' => $Area,
                         'UID' => $UID,
@@ -195,8 +192,7 @@ class AdditionalAPI extends BaseController
                     if ($builder->where('id', $latestRecord->id)->update($dataArcOff)) {
                         $areaBuilder = $db->table($tableArea);
                         $areaBuilder->where('MachineID', $MachineID)->update([
-                            'State' => 'IDLE',
-                            'lastBeat' => $DateTime
+                         
                         ]);
 
                         return $this->response->setBody('Data successfully updated for Tooling Off');
@@ -227,7 +223,6 @@ class AdditionalAPI extends BaseController
                     $areaBuilder = $db->table($tableArea);
                     $areaBuilder->where('MachineID', $MachineID)->update([
                         'State' => 'SETUP',
-                        'lastBeat' => $DateTime,
                         'WeldID' => $WeldID,
                         'Area' => $Area,
                         'UID' => $UID,
@@ -268,8 +263,7 @@ class AdditionalAPI extends BaseController
                     if ($builder->where('id', $latestRecord->id)->update($dataArcOff)) {
                         $areaBuilder = $db->table($tableArea);
                         $areaBuilder->where('MachineID', $MachineID)->update([
-                            'State' => 'IDLE',
-                            'lastBeat' => $DateTime
+                            
                         ]);
 
                         return $this->response->setBody('Data successfully updated for Setup Off');
