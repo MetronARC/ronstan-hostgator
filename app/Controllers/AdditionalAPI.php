@@ -118,12 +118,7 @@ class AdditionalAPI extends BaseController
                     ];
 
                     if ($builder->where('id', $latestRecord->id)->update($dataArcOff)) {
-                        // Update the 'State' in area table to 'IDLE'
-                        $areaBuilder = $db->table($tableArea);
-                        $areaBuilder->where('MachineID', $MachineID)->update([
-                            
-                        ]);
-
+                        // Remove area table update for maintenanceOff
                         return $this->response->setBody('Data successfully updated for Maintenance Off');
                     } else {
                         return $this->response->setStatusCode(500)->setBody('Error updating Maintenance Off data: ' . $db->error());
@@ -190,11 +185,7 @@ class AdditionalAPI extends BaseController
                     ];
 
                     if ($builder->where('id', $latestRecord->id)->update($dataArcOff)) {
-                        $areaBuilder = $db->table($tableArea);
-                        $areaBuilder->where('MachineID', $MachineID)->update([
-                         
-                        ]);
-
+                        // Remove area table update for toolingOff
                         return $this->response->setBody('Data successfully updated for Tooling Off');
                     } else {
                         return $this->response->setStatusCode(500)->setBody('Error updating Tooling Off data: ' . $db->error());
@@ -261,11 +252,7 @@ class AdditionalAPI extends BaseController
                     ];
 
                     if ($builder->where('id', $latestRecord->id)->update($dataArcOff)) {
-                        $areaBuilder = $db->table($tableArea);
-                        $areaBuilder->where('MachineID', $MachineID)->update([
-                            
-                        ]);
-
+                        // Remove area table update for setupOff
                         return $this->response->setBody('Data successfully updated for Setup Off');
                     } else {
                         return $this->response->setStatusCode(500)->setBody('Error updating Setup Off data: ' . $db->error());
