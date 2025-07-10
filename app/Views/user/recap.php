@@ -4,29 +4,6 @@
 <h1>Machine Recap</h1>
 <div class="date"></div>
 <div class="insights">
-    <!-- ACTIVE AREA -->
-    <div class="sales">
-        <span class="material-symbols-outlined">zoom_in_map</span>
-        <div class="middle">
-            <div class="left">
-                <h2>Input Machine</h2>
-                <select id="machine-dropdown" class="machine-input">
-                    <option value="" selected disabled>Select your Machine</option>
-                    <!-- Dynamically add options here -->
-                    <?php if (!empty($machines)): ?>
-                        <?php foreach ($machines as $machine): ?>
-                            <option value="<?= htmlspecialchars($machine['MachineID']) ?>"><?= htmlspecialchars($machine['MachineID']) ?></option>
-                        <?php endforeach; ?>
-                    <?php else: ?>
-                        <option value="">No machines available</option>
-                    <?php endif; ?>
-                </select>
-            </div>
-            <div class="progress">
-                <!-- Progress bar can remain here -->
-            </div>
-        </div>
-    </div>
     <div class="sales">
         <span class="material-symbols-outlined">zoom_in_map</span>
         <div class="middle">
@@ -34,38 +11,7 @@
                 <h2>Input Date</h2>
                 <input type="date" id="date-input" class="date-input">
             </div>
-            <div class="progress">
-                <a id="fetch-data" href="#">
-                    <p>Enter</p>
-                </a>
-            </div>
         </div>
-    </div>
-    <div class="sales">
-        <span class="material-symbols-outlined">zoom_in_map</span>
-        <div class="middle">
-            <div class="left">
-                <h2 style="margin-bottom: 15px">Usage Percentage</h2>
-                <input type="text" name="datetimes" class="datetime-input" />
-            </div>
-            <div class="progress">
-                <svg>
-                    <circle cx="42" cy="42" r="36"></circle>
-                </svg>
-                <div class="number">
-                    <h3>0%</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="recent-orders">
-    <div id="chart-container">
-        <canvas id="chart"></canvas>
-        <!-- Reset Zoom and Move Buttons -->
-        <button id="reset-zoom">Reset Zoom</button>
-        <button id="move-left">Move Left</button>
-        <button id="move-right">Move Right</button>
     </div>
 </div>
 

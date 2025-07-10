@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 12, 2025 at 09:23 AM
+-- Generation Time: Jun 12, 2025 at 09:53 AM
 -- Server version: 9.1.0
 -- PHP Version: 8.3.14
 
@@ -187,7 +187,7 @@ CREATE TABLE IF NOT EXISTS `auth_logins` (
   PRIMARY KEY (`id`),
   KEY `email` (`email`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=540 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=542 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `auth_logins`
@@ -730,7 +730,9 @@ INSERT INTO `auth_logins` (`id`, `ip_address`, `email`, `user_id`, `date`, `succ
 (536, '::1', 'ricoroenaldo@outlook.com', 1, '2025-05-19 06:20:18', 1),
 (537, '::1', 'ricoroenaldo@outlook.com', 1, '2025-05-19 06:34:55', 1),
 (538, '::1', 'ricoroenaldo', NULL, '2025-05-19 09:05:11', 0),
-(539, '::1', 'ricoroenaldo@outlook.com', 1, '2025-05-19 09:05:16', 1);
+(539, '::1', 'ricoroenaldo@outlook.com', 1, '2025-05-19 09:05:16', 1),
+(540, '127.0.0.1', 'ricoroenaldo@outlook.com', 1, '2025-06-12 09:24:47', 1),
+(541, '127.0.0.1', 'ricoroenaldo@outlook.com', 1, '2025-06-12 09:29:39', 1);
 
 -- --------------------------------------------------------
 
@@ -4741,11 +4743,11 @@ INSERT INTO `heartbeattable` (`ID`, `MachineID`, `WeldID`, `Area`, `Name`, `star
 DROP TABLE IF EXISTS `ledstate`;
 CREATE TABLE IF NOT EXISTS `ledstate` (
   `ID` int NOT NULL AUTO_INCREMENT,
-  `MachineID` varchar(50) NOT NULL,
-  `State` varchar(50) NOT NULL,
+  `MachineID` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `State` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
   `ledStatus` tinyint(1) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `ledstate`

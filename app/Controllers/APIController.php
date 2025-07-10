@@ -395,30 +395,7 @@ class APIController extends BaseController
                 // Set all ledstate ledStatus to false
                 $db->query("UPDATE ledstate SET ledStatus = 'false'");
 
-                // First check for any unfinished MAINTENANCE, TOOLING, or SETUP states in additionalhistory
-                $addHistoryBuilder = $db->table('additionalhistory');
-                $unfinishedState = $addHistoryBuilder->select('id, ArcOn')
-                    ->where('MachineID', $MachineID)
-                    ->where('Area', $Area)
-                    ->whereIn('State', ['MAINTENANCE', 'TOOLING', 'SETUP'])
-                    ->where('ArcOff', null)
-                    ->orderBy('id', 'DESC')
-                    ->limit(1)
-                    ->get()
-                    ->getRow();
-
-                if ($unfinishedState && isset($unfinishedState->id)) {
-                    // Calculate ArcTotal for the unfinished state
-                    $ArcTotal = date_diff(date_create($unfinishedState->ArcOn), date_create($Time))->format('%H:%I:%S');
-
-                    // Update the unfinished state with ArcOff time
-                    $addHistoryBuilder->where('id', $unfinishedState->id)->update([
-                        'ArcOff' => $Time,
-                        'ArcTotal' => $ArcTotal
-                    ]);
-                }
-
-                // Then proceed with normal ArcOn operation
+                // Proceed with normal ArcOn operation
                 $builder = $db->table($tableHistory);
                 $dataArcOn = [
                     'State' => 'ON',
@@ -491,29 +468,6 @@ class APIController extends BaseController
             } else if ($Status == "ArcCheck") {
                 // Set all ledstate ledStatus to false
                 $db->query("UPDATE ledstate SET ledStatus = 'false'");
-
-                // First check for any unfinished MAINTENANCE, TOOLING, or SETUP states in additionalhistory
-                $addHistoryBuilder = $db->table('additionalhistory');
-                $unfinishedState = $addHistoryBuilder->select('id, ArcOn')
-                    ->where('MachineID', $MachineID)
-                    ->where('Area', $Area)
-                    ->whereIn('State', ['MAINTENANCE', 'TOOLING', 'SETUP'])
-                    ->where('ArcOff', null)
-                    ->orderBy('id', 'DESC')
-                    ->limit(1)
-                    ->get()
-                    ->getRow();
-
-                if ($unfinishedState && isset($unfinishedState->id)) {
-                    // Calculate ArcTotal for the unfinished state
-                    $ArcTotal = date_diff(date_create($unfinishedState->ArcOn), date_create($Time))->format('%H:%I:%S');
-
-                    // Update the unfinished state with ArcOff time
-                    $addHistoryBuilder->where('id', $unfinishedState->id)->update([
-                        'ArcOff' => $Time,
-                        'ArcTotal' => $ArcTotal
-                    ]);
-                }
 
                 // Handle ArcCheck on the correct machinehistory table
                 $machineHistoryTable = $Area == "1" ? "machinehistory1" : "machinehistory2";
