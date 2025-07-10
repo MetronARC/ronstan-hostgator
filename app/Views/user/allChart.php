@@ -253,59 +253,75 @@
         const hoverLabels = [];
         const boxColors = [];
 
+        // First, set default colors for all minutes
         for (let i = 0; i < 24 * 60; i++) {
             const time = moment().startOf('day').minutes(i).format('HH:mm');
-            let color = '#383838'; // Default grey
-            let boxcolor = '#383838';
-            let hoverLabel = '';
+            dataPoints.push({
+                x: timeToDateTime(time, date),
+                y: 1,
+                label: ''
+            });
+            backgroundColors.push('#383838'); // Default grey
+            borderColors.push('#383838');
+            hoverLabels.push('');
+            boxColors.push('#383838');
+        }
 
-            data.forEach(interval => {
-                if (interval.ArcOn && interval.ArcOff) {
-                    const arcOnTime = timeToMinutes(interval.ArcOn);
-                    const arcOffTime = timeToMinutes(interval.ArcOff);
+        // First pass: Process only ON state (Production)
+        data.forEach(interval => {
+            if (interval.ArcOn && interval.ArcOff && interval.State?.toUpperCase() === 'ON') {
+                const arcOnTime = timeToMinutes(interval.ArcOn);
+                const arcOffTime = timeToMinutes(interval.ArcOff);
 
-                    if (arcOnTime !== null && arcOffTime !== null) {
-                        if (i >= arcOnTime && i < arcOffTime) {
-                            // Determine color based on State
-                            switch ((interval.State || '').toUpperCase()) {
-                                case 'ON':
-                                    color = '#228B22'; // Green
-                                    boxcolor = '#228B22';
-                                    break;
-                                case 'MAINTENANCE':
-                                    color = '#2196F3'; // Blue
-                                    boxcolor = '#2196F3';
-                                    break;
-                                case 'SETUP':
-                                    color = '#FFEA00'; // Yellow
-                                    boxcolor = '#FFEA00';
-                                    break;
-                                case 'TOOLING':
-                                    color = '#FFFFFF'; // White
-                                    boxcolor = '#FFFFFF';
-                                    break;
-                                default:
-                                    color = '#383838'; // Grey
-                                    boxcolor = '#383838';
-                            }
+                if (arcOnTime !== null && arcOffTime !== null) {
+                    for (let i = arcOnTime; i < arcOffTime; i++) {
+                        if (i >= 0 && i < 24 * 60) {
+                            boxColors[i] = '#228B22';
+                            backgroundColors[i] = '#228B22';
+                            borderColors[i] = '#228B22';
                             if (i === arcOnTime) {
-                                hoverLabel = `ArcOn: ${interval.ArcOn}, ArcOff: ${interval.ArcOff}, State: ${interval.State || 'Unknown'}, ArcTotal: ${arcOffTime - arcOnTime} minutes`;
+                                dataPoints[i].label = `ArcOn: ${interval.ArcOn}, ArcOff: ${interval.ArcOff}, State: Production, ArcTotal: ${arcOffTime - arcOnTime} minutes`;
                             }
                         }
                     }
                 }
-            });
+            }
+        });
 
-            dataPoints.push({
-                x: timeToDateTime(time, date),
-                y: 1,
-                label: hoverLabel
-            });
-            backgroundColors.push(color);
-            borderColors.push(color);
-            hoverLabels.push(hoverLabel);
-            boxColors.push(boxcolor);
-        }
+        // Second pass: Process other states only where there isn't already production
+        data.forEach(interval => {
+            if (interval.ArcOn && interval.ArcOff && interval.State?.toUpperCase() !== 'ON') {
+                const arcOnTime = timeToMinutes(interval.ArcOn);
+                const arcOffTime = timeToMinutes(interval.ArcOff);
+
+                if (arcOnTime !== null && arcOffTime !== null) {
+                    for (let i = arcOnTime; i < arcOffTime; i++) {
+                        if (i >= 0 && i < 24 * 60 && boxColors[i] === '#383838') {
+                            let color;
+                            switch (interval.State?.toUpperCase()) {
+                                case 'MAINTENANCE':
+                                    color = '#2196F3';
+                                    break;
+                                case 'SETUP':
+                                    color = '#FFEA00';
+                                    break;
+                                case 'TOOLING':
+                                    color = '#FFFFFF';
+                                    break;
+                                default:
+                                    color = '#383838';
+                            }
+                            boxColors[i] = color;
+                            backgroundColors[i] = color;
+                            borderColors[i] = color;
+                            if (i === arcOnTime) {
+                                dataPoints[i].label = `ArcOn: ${interval.ArcOn}, ArcOff: ${interval.ArcOff}, State: ${interval.State || 'Unknown'}, ArcTotal: ${arcOffTime - arcOnTime} minutes`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
 
         const ctx = canvas.getContext('2d');
 
