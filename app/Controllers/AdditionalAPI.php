@@ -504,15 +504,35 @@ class AdditionalAPI extends BaseController
         $response = [
             'maintenance' => false,
             'setup' => false,
-            'tooling' => false
+            'tooling' => false,
+            'debug_info' => []
         ];
         
         // Process the results
         foreach ($results as $row) {
-            if ($row->State && $row->ledStatus === 'true') {
-                $response[$row->State] = true;
-            } else if ($row->State) {
-                $response[$row->State] = false;
+            if ($row->State) {
+                $ledStatus = $row->ledStatus;
+                
+                // More robust value checking
+                $isTrue = (
+                    $ledStatus === 'true' || 
+                    strtolower(trim($ledStatus)) === 'true' ||
+                    $ledStatus === '1' ||
+                    $ledStatus === 'TRUE'
+                );
+                
+                $response[$row->State] = $isTrue;
+                
+                // Add debug info
+                $response['debug_info'][] = [
+                    'State' => $row->State,
+                    'ledStatus_raw' => $ledStatus,
+                    'ledStatus_length' => strlen($ledStatus),
+                    'ledStatus_hex' => bin2hex($ledStatus),
+                    'is_true' => $isTrue,
+                    'exact_match_true' => $ledStatus === 'true',
+                    'trim_lower_match_true' => strtolower(trim($ledStatus)) === 'true'
+                ];
             }
         }
         
@@ -628,6 +648,155 @@ class AdditionalAPI extends BaseController
                 'ledStatus' => $ledStatus,
                 'operation' => 'LED operation failed: ' . $e->getMessage(),
                 'success' => false
+            ];
+        }
+        
+        // Return JSON response
+        return $this->response->setJSON($response);
+    }
+
+    public function checkDatabaseInfo()
+    {
+        $apiKey = $this->request->getGet('apiKey');
+
+        if ($apiKey !== $this->apiKey) {
+            return $this->response->setStatusCode(400)->setBody("API key invalid.");
+        }
+
+        // Load the database connection
+        $db = \Config\Database::connect();
+        
+        try {
+            $response = [
+                'database_info' => [],
+                'table_structure' => [],
+                'permissions_test' => [],
+                'exact_values' => []
+            ];
+            
+            // Get database info
+            $response['database_info'] = [
+                'database_name' => $db->getDatabase(),
+                'status' => 'Connected'
+            ];
+            
+            // Check table structure
+            $tableQuery = $db->query("DESCRIBE ledstate");
+            $tableStructure = $tableQuery->getResultArray();
+            $response['table_structure'] = $tableStructure;
+            
+            // Test permissions by trying to update a record
+            $testUpdate = $db->table('ledstate')->where('ID', 1)->update(['ledStatus' => 'false']);
+            $response['permissions_test']['update_test'] = [
+                'result' => $testUpdate,
+                'error' => $db->error(),
+                'last_query' => $db->getLastQuery()
+            ];
+            
+            // Test insert permissions
+            $testInsert = $db->table('ledstate')->insert([
+                'MachineID' => 'TEST-MACHINE',
+                'State' => 'test',
+                'ledStatus' => 'false'
+            ]);
+            $response['permissions_test']['insert_test'] = [
+                'result' => $testInsert,
+                'error' => $db->error(),
+                'last_query' => $db->getLastQuery()
+            ];
+            
+            // Clean up test record
+            $db->table('ledstate')->where('MachineID', 'TEST-MACHINE')->delete();
+            
+        } catch (\Exception $e) {
+            $response = [
+                'error' => $e->getMessage(),
+                'trace' => $e->getTraceAsString()
+            ];
+        }
+        
+        // Return JSON response
+        return $this->response->setJSON($response);
+    }
+
+    public function checkExactValues()
+    {
+        $apiKey = $this->request->getGet('apiKey');
+        $MachineID = $this->request->getGet('MachineID');
+
+        if ($apiKey !== $this->apiKey) {
+            return $this->response->setStatusCode(400)->setBody("API key invalid.");
+        }
+
+        // Load the database connection
+        $db = \Config\Database::connect();
+        
+        try {
+            // Query all LED states for the MachineID
+            $query = $db->table('ledstate')->where('MachineID', $MachineID)->get();
+            $results = $query->getResult();
+            
+            $response = [
+                'MachineID' => $MachineID,
+                'records' => [],
+                'comparison_tests' => []
+            ];
+            
+            foreach ($results as $row) {
+                $ledStatus = $row->ledStatus;
+                
+                // Check exact string values and lengths
+                $response['records'][] = [
+                    'ID' => $row->ID,
+                    'MachineID' => $row->MachineID,
+                    'State' => $row->State,
+                    'ledStatus_raw' => $ledStatus,
+                    'ledStatus_length' => strlen($ledStatus),
+                    'ledStatus_hex' => bin2hex($ledStatus),
+                    'is_true_exact' => $ledStatus === 'true',
+                    'is_false_exact' => $ledStatus === 'false',
+                    'is_true_trim' => trim($ledStatus) === 'true',
+                    'is_false_trim' => trim($ledStatus) === 'false',
+                    'is_true_lower' => strtolower($ledStatus) === 'true',
+                    'is_false_lower' => strtolower($ledStatus) === 'false'
+                ];
+            }
+            
+            // Test direct update and check result
+            if (!empty($results)) {
+                $firstRecord = $results[0];
+                $testValue = $firstRecord->ledStatus === 'true' ? 'false' : 'true';
+                
+                // Update the record
+                $updateResult = $db->table('ledstate')
+                    ->where('ID', $firstRecord->ID)
+                    ->update(['ledStatus' => $testValue]);
+                
+                // Check the result immediately
+                $verifyQuery = $db->table('ledstate')->where('ID', $firstRecord->ID)->get();
+                $verifyResult = $verifyQuery->getRow();
+                
+                $response['comparison_tests'] = [
+                    'original_value' => $firstRecord->ledStatus,
+                    'test_value' => $testValue,
+                    'update_result' => $updateResult,
+                    'update_error' => $db->error(),
+                    'verify_value' => $verifyResult ? $verifyResult->ledStatus : 'null',
+                    'verify_length' => $verifyResult ? strlen($verifyResult->ledStatus) : 0,
+                    'verify_hex' => $verifyResult ? bin2hex($verifyResult->ledStatus) : '',
+                    'is_expected' => $verifyResult ? $verifyResult->ledStatus === $testValue : false
+                ];
+                
+                // Restore original value
+                $db->table('ledstate')
+                    ->where('ID', $firstRecord->ID)
+                    ->update(['ledStatus' => $firstRecord->ledStatus]);
+            }
+            
+        } catch (\Exception $e) {
+            $response = [
+                'error' => $e->getMessage(),
+                'trace' => $e->getTraceAsString()
             ];
         }
         

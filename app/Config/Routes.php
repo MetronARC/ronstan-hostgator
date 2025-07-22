@@ -22,5 +22,7 @@ $routes->get('API/updateAdditionalData', 'AdditionalAPI::updateAdditionalData');
 $routes->get('API/getLedStatus', 'AdditionalAPI::getLedStatus');
 $routes->get('API/debugLedState', 'AdditionalAPI::debugLedState');
 $routes->get('API/testLedUpdate', 'AdditionalAPI::testLedUpdate');
+$routes->get('API/checkDatabaseInfo', 'AdditionalAPI::checkDatabaseInfo');
+$routes->get('API/checkExactValues', 'AdditionalAPI::checkExactValues');
 
 $routes->setAutoRoute(true);

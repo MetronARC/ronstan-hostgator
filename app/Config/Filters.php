@@ -86,7 +86,10 @@ class Filters extends BaseFilters
                 'API/testLedUpdate',
                 'API/debugLedState',
                 'API/updateLedState',
-                'API/getLedState'
+                'API/getLedState',
+                'API/checkDatabaseInfo',
+                'API/checkExactValues',
+                'API/checkLedState'
             ]],
         ],
         'after' => [
