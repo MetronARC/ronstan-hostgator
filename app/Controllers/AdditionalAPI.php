@@ -65,8 +65,8 @@ class AdditionalAPI extends BaseController
                     $existingRecord = $ledBuilder->where('State', 'maintenance')->where('MachineID', $MachineID)->get()->getRow();
                     
                     if ($existingRecord) {
-                        // Explicitly cast to integer for tinyint(1) field
-                        $updateResult = $ledBuilder->where('State', 'maintenance')->where('MachineID', $MachineID)->update(['ledStatus' => (int)1]);
+                        // Use string values for varchar field
+                        $updateResult = $ledBuilder->where('State', 'maintenance')->where('MachineID', $MachineID)->update(['ledStatus' => 'true']);
                         if ($updateResult === false) {
                             $ledUpdateResult = 'LED update failed: ' . $db->error();
                         } else {
@@ -77,7 +77,7 @@ class AdditionalAPI extends BaseController
                         $insertResult = $ledBuilder->insert([
                             'MachineID' => $MachineID,
                             'State' => 'maintenance',
-                            'ledStatus' => (int)1
+                            'ledStatus' => 'true'
                         ]);
                         if ($insertResult === false) {
                             $ledUpdateResult = 'LED insert failed: ' . $db->error();
@@ -126,8 +126,8 @@ class AdditionalAPI extends BaseController
                     $existingRecord = $ledBuilder->where('State', 'maintenance')->where('MachineID', $MachineID)->get()->getRow();
                     
                     if ($existingRecord) {
-                        // Explicitly cast to integer for tinyint(1) field
-                        $updateResult = $ledBuilder->where('State', 'maintenance')->where('MachineID', $MachineID)->update(['ledStatus' => (int)0]);
+                        // Use string values for varchar field
+                        $updateResult = $ledBuilder->where('State', 'maintenance')->where('MachineID', $MachineID)->update(['ledStatus' => 'false']);
                         if ($updateResult === false) {
                             $ledUpdateResult = 'LED update failed: ' . $db->error();
                         } else {
@@ -138,7 +138,7 @@ class AdditionalAPI extends BaseController
                         $insertResult = $ledBuilder->insert([
                             'MachineID' => $MachineID,
                             'State' => 'maintenance',
-                            'ledStatus' => (int)0
+                            'ledStatus' => 'false'
                         ]);
                         if ($insertResult === false) {
                             $ledUpdateResult = 'LED insert failed: ' . $db->error();
@@ -191,8 +191,8 @@ class AdditionalAPI extends BaseController
                     $existingRecord = $ledBuilder->where('State', 'tooling')->where('MachineID', $MachineID)->get()->getRow();
                     
                     if ($existingRecord) {
-                        // Explicitly cast to integer for tinyint(1) field
-                        $updateResult = $ledBuilder->where('State', 'tooling')->where('MachineID', $MachineID)->update(['ledStatus' => (int)1]);
+                        // Use string values for varchar field
+                        $updateResult = $ledBuilder->where('State', 'tooling')->where('MachineID', $MachineID)->update(['ledStatus' => 'true']);
                         if ($updateResult === false) {
                             $ledUpdateResult = 'LED update failed: ' . $db->error();
                         } else {
@@ -203,7 +203,7 @@ class AdditionalAPI extends BaseController
                         $insertResult = $ledBuilder->insert([
                             'MachineID' => $MachineID,
                             'State' => 'tooling',
-                            'ledStatus' => (int)1
+                            'ledStatus' => 'true'
                         ]);
                         if ($insertResult === false) {
                             $ledUpdateResult = 'LED insert failed: ' . $db->error();
@@ -252,8 +252,8 @@ class AdditionalAPI extends BaseController
                     $existingRecord = $ledBuilder->where('State', 'tooling')->where('MachineID', $MachineID)->get()->getRow();
                     
                     if ($existingRecord) {
-                        // Explicitly cast to integer for tinyint(1) field
-                        $updateResult = $ledBuilder->where('State', 'tooling')->where('MachineID', $MachineID)->update(['ledStatus' => (int)0]);
+                        // Use string values for varchar field
+                        $updateResult = $ledBuilder->where('State', 'tooling')->where('MachineID', $MachineID)->update(['ledStatus' => 'false']);
                         if ($updateResult === false) {
                             $ledUpdateResult = 'LED update failed: ' . $db->error();
                         } else {
@@ -264,7 +264,7 @@ class AdditionalAPI extends BaseController
                         $insertResult = $ledBuilder->insert([
                             'MachineID' => $MachineID,
                             'State' => 'tooling',
-                            'ledStatus' => (int)0
+                            'ledStatus' => 'false'
                         ]);
                         if ($insertResult === false) {
                             $ledUpdateResult = 'LED insert failed: ' . $db->error();
@@ -314,8 +314,8 @@ class AdditionalAPI extends BaseController
                     $existingRecord = $ledBuilder->where('State', 'setup')->where('MachineID', $MachineID)->get()->getRow();
                     
                     if ($existingRecord) {
-                        // Explicitly cast to integer for tinyint(1) field
-                        $updateResult = $ledBuilder->where('State', 'setup')->where('MachineID', $MachineID)->update(['ledStatus' => (int)1]);
+                        // Use string values for varchar field
+                        $updateResult = $ledBuilder->where('State', 'setup')->where('MachineID', $MachineID)->update(['ledStatus' => 'true']);
                         if ($updateResult === false) {
                             $ledUpdateResult = 'LED update failed: ' . $db->error();
                         } else {
@@ -326,7 +326,7 @@ class AdditionalAPI extends BaseController
                         $insertResult = $ledBuilder->insert([
                             'MachineID' => $MachineID,
                             'State' => 'setup',
-                            'ledStatus' => (int)1
+                            'ledStatus' => 'true'
                         ]);
                         if ($insertResult === false) {
                             $ledUpdateResult = 'LED insert failed: ' . $db->error();
@@ -375,8 +375,8 @@ class AdditionalAPI extends BaseController
                     $existingRecord = $ledBuilder->where('State', 'setup')->where('MachineID', $MachineID)->get()->getRow();
                     
                     if ($existingRecord) {
-                        // Explicitly cast to integer for tinyint(1) field
-                        $updateResult = $ledBuilder->where('State', 'setup')->where('MachineID', $MachineID)->update(['ledStatus' => (int)0]);
+                        // Use string values for varchar field
+                        $updateResult = $ledBuilder->where('State', 'setup')->where('MachineID', $MachineID)->update(['ledStatus' => 'false']);
                         if ($updateResult === false) {
                             $ledUpdateResult = 'LED update failed: ' . $db->error();
                         } else {
@@ -387,7 +387,7 @@ class AdditionalAPI extends BaseController
                         $insertResult = $ledBuilder->insert([
                             'MachineID' => $MachineID,
                             'State' => 'setup',
-                            'ledStatus' => (int)0
+                            'ledStatus' => 'false'
                         ]);
                         if ($insertResult === false) {
                             $ledUpdateResult = 'LED insert failed: ' . $db->error();
@@ -488,8 +488,10 @@ class AdditionalAPI extends BaseController
         
         // Process the results
         foreach ($results as $row) {
-            if ($row->State && $row->ledStatus) {
-                $response[$row->State] = (bool)$row->ledStatus;
+            if ($row->State && $row->ledStatus === 'true') {
+                $response[$row->State] = true;
+            } else if ($row->State) {
+                $response[$row->State] = false;
             }
         }
         
@@ -523,7 +525,7 @@ class AdditionalAPI extends BaseController
                 'ID' => $row->ID,
                 'MachineID' => $row->MachineID,
                 'State' => $row->State,
-                'ledStatus' => (bool)$row->ledStatus
+                'ledStatus' => $row->ledStatus === 'true'
             ];
         }
         
@@ -536,14 +538,14 @@ class AdditionalAPI extends BaseController
         $apiKey = $this->request->getGet('apiKey');
         $MachineID = $this->request->getGet('MachineID');
         $State = $this->request->getGet('State'); // maintenance, setup, tooling
-        $ledStatus = $this->request->getGet('ledStatus'); // 0 or 1
+        $ledStatus = $this->request->getGet('ledStatus'); // true or false
 
         if ($apiKey !== $this->apiKey) {
             return $this->response->setStatusCode(400)->setBody("API key invalid.");
         }
 
-        if (!$MachineID || !$State || !in_array($ledStatus, ['0', '1'])) {
-            return $this->response->setStatusCode(400)->setBody("Missing or invalid parameters. Required: MachineID, State, ledStatus (0 or 1)");
+        if (!$MachineID || !$State || !in_array($ledStatus, ['true', 'false'])) {
+            return $this->response->setStatusCode(400)->setBody("Missing or invalid parameters. Required: MachineID, State, ledStatus (true or false)");
         }
 
         // Load the database connection
@@ -558,14 +560,14 @@ class AdditionalAPI extends BaseController
             $response = [
                 'MachineID' => $MachineID,
                 'State' => $State,
-                'ledStatus' => (int)$ledStatus,
+                'ledStatus' => $ledStatus,
                 'existingRecord' => $existingRecord ? true : false,
                 'operation' => ''
             ];
             
             if ($existingRecord) {
-                // Explicitly cast to integer for tinyint(1) field
-                $updateResult = $ledBuilder->where('State', $State)->where('MachineID', $MachineID)->update(['ledStatus' => (int)$ledStatus]);
+                // Use string values for varchar field
+                $updateResult = $ledBuilder->where('State', $State)->where('MachineID', $MachineID)->update(['ledStatus' => $ledStatus]);
                 if ($updateResult === false) {
                     $response['operation'] = 'LED update failed: ' . $db->error();
                     $response['success'] = false;
@@ -578,7 +580,7 @@ class AdditionalAPI extends BaseController
                 $insertResult = $ledBuilder->insert([
                     'MachineID' => $MachineID,
                     'State' => $State,
-                    'ledStatus' => (int)$ledStatus
+                    'ledStatus' => $ledStatus
                 ]);
                 if ($insertResult === false) {
                     $response['operation'] = 'LED insert failed: ' . $db->error();
@@ -595,14 +597,14 @@ class AdditionalAPI extends BaseController
                 'ID' => $verifyRecord->ID,
                 'MachineID' => $verifyRecord->MachineID,
                 'State' => $verifyRecord->State,
-                'ledStatus' => (bool)$verifyRecord->ledStatus
+                'ledStatus' => $verifyRecord->ledStatus === 'true'
             ] : null;
             
         } catch (\Exception $e) {
             $response = [
                 'MachineID' => $MachineID,
                 'State' => $State,
-                'ledStatus' => (int)$ledStatus,
+                'ledStatus' => $ledStatus,
                 'operation' => 'LED operation failed: ' . $e->getMessage(),
                 'success' => false
             ];
