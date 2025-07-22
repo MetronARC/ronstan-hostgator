@@ -82,7 +82,11 @@ class Filters extends BaseFilters
                 'API/handleArea',
                 'API/updateMachineData',
                 'API/updateAdditionalData',
-                'API/getLedStatus'
+                'API/getLedStatus',
+                'API/testLedUpdate',
+                'API/debugLedState',
+                'API/updateLedState',
+                'API/getLedState'
             ]],
         ],
         'after' => [

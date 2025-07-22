@@ -64,13 +64,28 @@ class AdditionalAPI extends BaseController
                     // First check if the record exists
                     $existingRecord = $ledBuilder->where('State', 'maintenance')->where('MachineID', $MachineID)->get()->getRow();
                     
+                    // Debug information
+                    $debugInfo = [
+                        'MachineID' => $MachineID,
+                        'State' => 'maintenance',
+                        'existingRecord' => $existingRecord ? 'YES' : 'NO',
+                        'database_error' => $db->error(),
+                        'last_query' => $db->getLastQuery()
+                    ];
+                    
                     if ($existingRecord) {
                         // Use string values for varchar field
                         $updateResult = $ledBuilder->where('State', 'maintenance')->where('MachineID', $MachineID)->update(['ledStatus' => 'true']);
+                        
+                        // Additional debug info for update
+                        $debugInfo['update_result'] = $updateResult;
+                        $debugInfo['update_error'] = $db->error();
+                        $debugInfo['update_query'] = $db->getLastQuery();
+                        
                         if ($updateResult === false) {
-                            $ledUpdateResult = 'LED update failed: ' . $db->error();
+                            $ledUpdateResult = 'LED update failed: ' . $db->error() . ' | Debug: ' . json_encode($debugInfo);
                         } else {
-                            $ledUpdateResult = 'LED updated successfully (affected rows: ' . $updateResult . ')';
+                            $ledUpdateResult = 'LED updated successfully (affected rows: ' . $updateResult . ') | Debug: ' . json_encode($debugInfo);
                         }
                     } else {
                         // If record doesn't exist, create it
@@ -79,14 +94,20 @@ class AdditionalAPI extends BaseController
                             'State' => 'maintenance',
                             'ledStatus' => 'true'
                         ]);
+                        
+                        // Additional debug info for insert
+                        $debugInfo['insert_result'] = $insertResult;
+                        $debugInfo['insert_error'] = $db->error();
+                        $debugInfo['insert_query'] = $db->getLastQuery();
+                        
                         if ($insertResult === false) {
-                            $ledUpdateResult = 'LED insert failed: ' . $db->error();
+                            $ledUpdateResult = 'LED insert failed: ' . $db->error() . ' | Debug: ' . json_encode($debugInfo);
                         } else {
-                            $ledUpdateResult = 'LED record created and updated (ID: ' . $db->insertID() . ')';
+                            $ledUpdateResult = 'LED record created and updated (ID: ' . $db->insertID() . ') | Debug: ' . json_encode($debugInfo);
                         }
                     }
                 } catch (\Exception $e) {
-                    $ledUpdateResult = 'LED operation failed: ' . $e->getMessage();
+                    $ledUpdateResult = 'LED operation failed: ' . $e->getMessage() . ' | Debug: ' . json_encode($debugInfo ?? []);
                 }
 
                 // Insert into machine history for ArcOn
