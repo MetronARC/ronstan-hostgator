@@ -59,7 +59,22 @@ class AdditionalAPI extends BaseController
             if ($Status == "maintenanceOn") {
                 // Update LED state for maintenance ON
                 $ledBuilder = $db->table('ledstate');
-                $ledBuilder->where('State', 'maintenance')->where('MachineID', $MachineID)->update(['ledStatus' => 1]);
+                
+                // First check if the record exists
+                $existingRecord = $ledBuilder->where('State', 'maintenance')->where('MachineID', $MachineID)->get()->getRow();
+                
+                if ($existingRecord) {
+                    $ledBuilder->where('State', 'maintenance')->where('MachineID', $MachineID)->update(['ledStatus' => 1]);
+                    $ledUpdateResult = 'LED updated successfully';
+                } else {
+                    // If record doesn't exist, create it
+                    $ledBuilder->insert([
+                        'MachineID' => $MachineID,
+                        'State' => 'maintenance',
+                        'ledStatus' => 1
+                    ]);
+                    $ledUpdateResult = 'LED record created and updated';
+                }
 
                 // Insert into machine history for ArcOn
                 $builder = $db->table($tableHistory);
@@ -85,14 +100,29 @@ class AdditionalAPI extends BaseController
                         'Login' => $Time,
                         'Status' => 'Active'
                     ]);
-                    return $this->response->setBody('Maintenance On Initiated');
+                    return $this->response->setBody('Maintenance On Initiated - ' . $ledUpdateResult);
                 } else {
                     return $this->response->setStatusCode(500)->setBody('Error inserting ArcOn data: ' . $db->error());
                 }
             } else if ($Status == "maintenanceOff") {
                 // Update LED state for maintenance OFF
                 $ledBuilder = $db->table('ledstate');
-                $ledBuilder->where('State', 'maintenance')->where('MachineID', $MachineID)->update(['ledStatus' => 0]);
+                
+                // First check if the record exists
+                $existingRecord = $ledBuilder->where('State', 'maintenance')->where('MachineID', $MachineID)->get()->getRow();
+                
+                if ($existingRecord) {
+                    $ledBuilder->where('State', 'maintenance')->where('MachineID', $MachineID)->update(['ledStatus' => 0]);
+                    $ledUpdateResult = 'LED updated successfully';
+                } else {
+                    // If record doesn't exist, create it
+                    $ledBuilder->insert([
+                        'MachineID' => $MachineID,
+                        'State' => 'maintenance',
+                        'ledStatus' => 0
+                    ]);
+                    $ledUpdateResult = 'LED record created and updated';
+                }
 
                 // Fetch the ArcOn time to calculate ArcTotal
                 $builder = $db->table($tableHistory);
@@ -119,7 +149,7 @@ class AdditionalAPI extends BaseController
 
                     if ($builder->where('id', $latestRecord->id)->update($dataArcOff)) {
                         // Remove area table update for maintenanceOff
-                        return $this->response->setBody('Data successfully updated for Maintenance Off');
+                        return $this->response->setBody('Data successfully updated for Maintenance Off - ' . $ledUpdateResult);
                     } else {
                         return $this->response->setStatusCode(500)->setBody('Error updating Maintenance Off data: ' . $db->error());
                     }
@@ -129,7 +159,22 @@ class AdditionalAPI extends BaseController
             } else if ($Status == "toolingOn") {
                 // Update LED state for tooling ON
                 $ledBuilder = $db->table('ledstate');
-                $ledBuilder->where('State', 'tooling')->where('MachineID', $MachineID)->update(['ledStatus' => 1]);
+                
+                // First check if the record exists
+                $existingRecord = $ledBuilder->where('State', 'tooling')->where('MachineID', $MachineID)->get()->getRow();
+                
+                if ($existingRecord) {
+                    $ledBuilder->where('State', 'tooling')->where('MachineID', $MachineID)->update(['ledStatus' => 1]);
+                    $ledUpdateResult = 'LED updated successfully';
+                } else {
+                    // If record doesn't exist, create it
+                    $ledBuilder->insert([
+                        'MachineID' => $MachineID,
+                        'State' => 'tooling',
+                        'ledStatus' => 1
+                    ]);
+                    $ledUpdateResult = 'LED record created and updated';
+                }
 
                 // Insert into machine history for Tooling
                 $builder = $db->table($tableHistory);
@@ -155,14 +200,29 @@ class AdditionalAPI extends BaseController
                         'Login' => $Time,
                         'Status' => 'Active'
                     ]);
-                    return $this->response->setBody('Tooling On Initiated');
+                    return $this->response->setBody('Tooling On Initiated - ' . $ledUpdateResult);
                 } else {
                     return $this->response->setStatusCode(500)->setBody('Error inserting ArcOn data: ' . $db->error());
                 }
             } else if ($Status == "toolingOff") {
                 // Update LED state for tooling OFF
                 $ledBuilder = $db->table('ledstate');
-                $ledBuilder->where('State', 'tooling')->where('MachineID', $MachineID)->update(['ledStatus' => 0]);
+                
+                // First check if the record exists
+                $existingRecord = $ledBuilder->where('State', 'tooling')->where('MachineID', $MachineID)->get()->getRow();
+                
+                if ($existingRecord) {
+                    $ledBuilder->where('State', 'tooling')->where('MachineID', $MachineID)->update(['ledStatus' => 0]);
+                    $ledUpdateResult = 'LED updated successfully';
+                } else {
+                    // If record doesn't exist, create it
+                    $ledBuilder->insert([
+                        'MachineID' => $MachineID,
+                        'State' => 'tooling',
+                        'ledStatus' => 0
+                    ]);
+                    $ledUpdateResult = 'LED record created and updated';
+                }
 
                 // Fetch the ArcOn time to calculate ArcTotal
                 $builder = $db->table($tableHistory);
@@ -186,7 +246,7 @@ class AdditionalAPI extends BaseController
 
                     if ($builder->where('id', $latestRecord->id)->update($dataArcOff)) {
                         // Remove area table update for toolingOff
-                        return $this->response->setBody('Data successfully updated for Tooling Off');
+                        return $this->response->setBody('Data successfully updated for Tooling Off - ' . $ledUpdateResult);
                     } else {
                         return $this->response->setStatusCode(500)->setBody('Error updating Tooling Off data: ' . $db->error());
                     }
@@ -196,7 +256,22 @@ class AdditionalAPI extends BaseController
             } else if ($Status == "setupOn") {
                 // Update LED state for setup ON
                 $ledBuilder = $db->table('ledstate');
-                $ledBuilder->where('State', 'setup')->where('MachineID', $MachineID)->update(['ledStatus' => 1]);
+                
+                // First check if the record exists
+                $existingRecord = $ledBuilder->where('State', 'setup')->where('MachineID', $MachineID)->get()->getRow();
+                
+                if ($existingRecord) {
+                    $ledBuilder->where('State', 'setup')->where('MachineID', $MachineID)->update(['ledStatus' => 1]);
+                    $ledUpdateResult = 'LED updated successfully';
+                } else {
+                    // If record doesn't exist, create it
+                    $ledBuilder->insert([
+                        'MachineID' => $MachineID,
+                        'State' => 'setup',
+                        'ledStatus' => 1
+                    ]);
+                    $ledUpdateResult = 'LED record created and updated';
+                }
 
                 // Insert into machine history for Setup
                 $builder = $db->table($tableHistory);
@@ -222,14 +297,29 @@ class AdditionalAPI extends BaseController
                         'Login' => $Time,
                         'Status' => 'Active'
                     ]);
-                    return $this->response->setBody('Setup On Initiated');
+                    return $this->response->setBody('Setup On Initiated - ' . $ledUpdateResult);
                 } else {
                     return $this->response->setStatusCode(500)->setBody('Error inserting ArcOn data: ' . $db->error());
                 }
             } else if ($Status == "setupOff") {
                 // Update LED state for setup OFF
                 $ledBuilder = $db->table('ledstate');
-                $ledBuilder->where('State', 'setup')->where('MachineID', $MachineID)->update(['ledStatus' => 0]);
+                
+                // First check if the record exists
+                $existingRecord = $ledBuilder->where('State', 'setup')->where('MachineID', $MachineID)->get()->getRow();
+                
+                if ($existingRecord) {
+                    $ledBuilder->where('State', 'setup')->where('MachineID', $MachineID)->update(['ledStatus' => 0]);
+                    $ledUpdateResult = 'LED updated successfully';
+                } else {
+                    // If record doesn't exist, create it
+                    $ledBuilder->insert([
+                        'MachineID' => $MachineID,
+                        'State' => 'setup',
+                        'ledStatus' => 0
+                    ]);
+                    $ledUpdateResult = 'LED record created and updated';
+                }
 
                 // Fetch the ArcOn time to calculate ArcTotal
                 $builder = $db->table($tableHistory);
@@ -253,7 +343,7 @@ class AdditionalAPI extends BaseController
 
                     if ($builder->where('id', $latestRecord->id)->update($dataArcOff)) {
                         // Remove area table update for setupOff
-                        return $this->response->setBody('Data successfully updated for Setup Off');
+                        return $this->response->setBody('Data successfully updated for Setup Off - ' . $ledUpdateResult);
                     } else {
                         return $this->response->setStatusCode(500)->setBody('Error updating Setup Off data: ' . $db->error());
                     }
@@ -323,6 +413,40 @@ class AdditionalAPI extends BaseController
             if ($row->State && $row->ledStatus) {
                 $response[$row->State] = (bool)$row->ledStatus;
             }
+        }
+        
+        // Return JSON response
+        return $this->response->setJSON($response);
+    }
+
+    public function debugLedState()
+    {
+        $apiKey = $this->request->getGet('apiKey');
+        $MachineID = $this->request->getGet('MachineID');
+
+        if ($apiKey !== $this->apiKey) {
+            return $this->response->setStatusCode(400)->setBody("API key invalid.");
+        }
+
+        // Load the database connection
+        $db = \Config\Database::connect();
+        
+        // Query all LED states for the MachineID
+        $query = $db->table('ledstate')->where('MachineID', $MachineID)->get();
+        $results = $query->getResult();
+        
+        $response = [
+            'MachineID' => $MachineID,
+            'records' => []
+        ];
+        
+        foreach ($results as $row) {
+            $response['records'][] = [
+                'ID' => $row->ID,
+                'MachineID' => $row->MachineID,
+                'State' => $row->State,
+                'ledStatus' => (bool)$row->ledStatus
+            ];
         }
         
         // Return JSON response
