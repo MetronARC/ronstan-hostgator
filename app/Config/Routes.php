@@ -21,5 +21,6 @@ $routes->post('recap/fetchChartData', 'Recap::fetchChartData');
 $routes->get('API/updateAdditionalData', 'AdditionalAPI::updateAdditionalData');
 $routes->get('API/getLedStatus', 'AdditionalAPI::getLedStatus');
 $routes->get('API/debugLedState', 'AdditionalAPI::debugLedState');
+$routes->get('API/testLedUpdate', 'AdditionalAPI::testLedUpdate');
 
 $routes->setAutoRoute(true);

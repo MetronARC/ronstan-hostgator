@@ -60,20 +60,32 @@ class AdditionalAPI extends BaseController
                 // Update LED state for maintenance ON
                 $ledBuilder = $db->table('ledstate');
                 
-                // First check if the record exists
-                $existingRecord = $ledBuilder->where('State', 'maintenance')->where('MachineID', $MachineID)->get()->getRow();
-                
-                if ($existingRecord) {
-                    $ledBuilder->where('State', 'maintenance')->where('MachineID', $MachineID)->update(['ledStatus' => 1]);
-                    $ledUpdateResult = 'LED updated successfully';
-                } else {
-                    // If record doesn't exist, create it
-                    $ledBuilder->insert([
-                        'MachineID' => $MachineID,
-                        'State' => 'maintenance',
-                        'ledStatus' => 1
-                    ]);
-                    $ledUpdateResult = 'LED record created and updated';
+                try {
+                    // First check if the record exists
+                    $existingRecord = $ledBuilder->where('State', 'maintenance')->where('MachineID', $MachineID)->get()->getRow();
+                    
+                    if ($existingRecord) {
+                        $updateResult = $ledBuilder->where('State', 'maintenance')->where('MachineID', $MachineID)->update(['ledStatus' => 1]);
+                        if ($updateResult === false) {
+                            $ledUpdateResult = 'LED update failed: ' . $db->error();
+                        } else {
+                            $ledUpdateResult = 'LED updated successfully (affected rows: ' . $updateResult . ')';
+                        }
+                    } else {
+                        // If record doesn't exist, create it
+                        $insertResult = $ledBuilder->insert([
+                            'MachineID' => $MachineID,
+                            'State' => 'maintenance',
+                            'ledStatus' => 1
+                        ]);
+                        if ($insertResult === false) {
+                            $ledUpdateResult = 'LED insert failed: ' . $db->error();
+                        } else {
+                            $ledUpdateResult = 'LED record created and updated (ID: ' . $db->insertID() . ')';
+                        }
+                    }
+                } catch (\Exception $e) {
+                    $ledUpdateResult = 'LED operation failed: ' . $e->getMessage();
                 }
 
                 // Insert into machine history for ArcOn
@@ -108,20 +120,32 @@ class AdditionalAPI extends BaseController
                 // Update LED state for maintenance OFF
                 $ledBuilder = $db->table('ledstate');
                 
-                // First check if the record exists
-                $existingRecord = $ledBuilder->where('State', 'maintenance')->where('MachineID', $MachineID)->get()->getRow();
-                
-                if ($existingRecord) {
-                    $ledBuilder->where('State', 'maintenance')->where('MachineID', $MachineID)->update(['ledStatus' => 0]);
-                    $ledUpdateResult = 'LED updated successfully';
-                } else {
-                    // If record doesn't exist, create it
-                    $ledBuilder->insert([
-                        'MachineID' => $MachineID,
-                        'State' => 'maintenance',
-                        'ledStatus' => 0
-                    ]);
-                    $ledUpdateResult = 'LED record created and updated';
+                try {
+                    // First check if the record exists
+                    $existingRecord = $ledBuilder->where('State', 'maintenance')->where('MachineID', $MachineID)->get()->getRow();
+                    
+                    if ($existingRecord) {
+                        $updateResult = $ledBuilder->where('State', 'maintenance')->where('MachineID', $MachineID)->update(['ledStatus' => 0]);
+                        if ($updateResult === false) {
+                            $ledUpdateResult = 'LED update failed: ' . $db->error();
+                        } else {
+                            $ledUpdateResult = 'LED updated successfully (affected rows: ' . $updateResult . ')';
+                        }
+                    } else {
+                        // If record doesn't exist, create it
+                        $insertResult = $ledBuilder->insert([
+                            'MachineID' => $MachineID,
+                            'State' => 'maintenance',
+                            'ledStatus' => 0
+                        ]);
+                        if ($insertResult === false) {
+                            $ledUpdateResult = 'LED insert failed: ' . $db->error();
+                        } else {
+                            $ledUpdateResult = 'LED record created and updated (ID: ' . $db->insertID() . ')';
+                        }
+                    }
+                } catch (\Exception $e) {
+                    $ledUpdateResult = 'LED operation failed: ' . $e->getMessage();
                 }
 
                 // Fetch the ArcOn time to calculate ArcTotal
@@ -160,20 +184,32 @@ class AdditionalAPI extends BaseController
                 // Update LED state for tooling ON
                 $ledBuilder = $db->table('ledstate');
                 
-                // First check if the record exists
-                $existingRecord = $ledBuilder->where('State', 'tooling')->where('MachineID', $MachineID)->get()->getRow();
-                
-                if ($existingRecord) {
-                    $ledBuilder->where('State', 'tooling')->where('MachineID', $MachineID)->update(['ledStatus' => 1]);
-                    $ledUpdateResult = 'LED updated successfully';
-                } else {
-                    // If record doesn't exist, create it
-                    $ledBuilder->insert([
-                        'MachineID' => $MachineID,
-                        'State' => 'tooling',
-                        'ledStatus' => 1
-                    ]);
-                    $ledUpdateResult = 'LED record created and updated';
+                try {
+                    // First check if the record exists
+                    $existingRecord = $ledBuilder->where('State', 'tooling')->where('MachineID', $MachineID)->get()->getRow();
+                    
+                    if ($existingRecord) {
+                        $updateResult = $ledBuilder->where('State', 'tooling')->where('MachineID', $MachineID)->update(['ledStatus' => 1]);
+                        if ($updateResult === false) {
+                            $ledUpdateResult = 'LED update failed: ' . $db->error();
+                        } else {
+                            $ledUpdateResult = 'LED updated successfully (affected rows: ' . $updateResult . ')';
+                        }
+                    } else {
+                        // If record doesn't exist, create it
+                        $insertResult = $ledBuilder->insert([
+                            'MachineID' => $MachineID,
+                            'State' => 'tooling',
+                            'ledStatus' => 1
+                        ]);
+                        if ($insertResult === false) {
+                            $ledUpdateResult = 'LED insert failed: ' . $db->error();
+                        } else {
+                            $ledUpdateResult = 'LED record created and updated (ID: ' . $db->insertID() . ')';
+                        }
+                    }
+                } catch (\Exception $e) {
+                    $ledUpdateResult = 'LED operation failed: ' . $e->getMessage();
                 }
 
                 // Insert into machine history for Tooling
@@ -208,20 +244,32 @@ class AdditionalAPI extends BaseController
                 // Update LED state for tooling OFF
                 $ledBuilder = $db->table('ledstate');
                 
-                // First check if the record exists
-                $existingRecord = $ledBuilder->where('State', 'tooling')->where('MachineID', $MachineID)->get()->getRow();
-                
-                if ($existingRecord) {
-                    $ledBuilder->where('State', 'tooling')->where('MachineID', $MachineID)->update(['ledStatus' => 0]);
-                    $ledUpdateResult = 'LED updated successfully';
-                } else {
-                    // If record doesn't exist, create it
-                    $ledBuilder->insert([
-                        'MachineID' => $MachineID,
-                        'State' => 'tooling',
-                        'ledStatus' => 0
-                    ]);
-                    $ledUpdateResult = 'LED record created and updated';
+                try {
+                    // First check if the record exists
+                    $existingRecord = $ledBuilder->where('State', 'tooling')->where('MachineID', $MachineID)->get()->getRow();
+                    
+                    if ($existingRecord) {
+                        $updateResult = $ledBuilder->where('State', 'tooling')->where('MachineID', $MachineID)->update(['ledStatus' => 0]);
+                        if ($updateResult === false) {
+                            $ledUpdateResult = 'LED update failed: ' . $db->error();
+                        } else {
+                            $ledUpdateResult = 'LED updated successfully (affected rows: ' . $updateResult . ')';
+                        }
+                    } else {
+                        // If record doesn't exist, create it
+                        $insertResult = $ledBuilder->insert([
+                            'MachineID' => $MachineID,
+                            'State' => 'tooling',
+                            'ledStatus' => 0
+                        ]);
+                        if ($insertResult === false) {
+                            $ledUpdateResult = 'LED insert failed: ' . $db->error();
+                        } else {
+                            $ledUpdateResult = 'LED record created and updated (ID: ' . $db->insertID() . ')';
+                        }
+                    }
+                } catch (\Exception $e) {
+                    $ledUpdateResult = 'LED operation failed: ' . $e->getMessage();
                 }
 
                 // Fetch the ArcOn time to calculate ArcTotal
@@ -257,20 +305,32 @@ class AdditionalAPI extends BaseController
                 // Update LED state for setup ON
                 $ledBuilder = $db->table('ledstate');
                 
-                // First check if the record exists
-                $existingRecord = $ledBuilder->where('State', 'setup')->where('MachineID', $MachineID)->get()->getRow();
-                
-                if ($existingRecord) {
-                    $ledBuilder->where('State', 'setup')->where('MachineID', $MachineID)->update(['ledStatus' => 1]);
-                    $ledUpdateResult = 'LED updated successfully';
-                } else {
-                    // If record doesn't exist, create it
-                    $ledBuilder->insert([
-                        'MachineID' => $MachineID,
-                        'State' => 'setup',
-                        'ledStatus' => 1
-                    ]);
-                    $ledUpdateResult = 'LED record created and updated';
+                try {
+                    // First check if the record exists
+                    $existingRecord = $ledBuilder->where('State', 'setup')->where('MachineID', $MachineID)->get()->getRow();
+                    
+                    if ($existingRecord) {
+                        $updateResult = $ledBuilder->where('State', 'setup')->where('MachineID', $MachineID)->update(['ledStatus' => 1]);
+                        if ($updateResult === false) {
+                            $ledUpdateResult = 'LED update failed: ' . $db->error();
+                        } else {
+                            $ledUpdateResult = 'LED updated successfully (affected rows: ' . $updateResult . ')';
+                        }
+                    } else {
+                        // If record doesn't exist, create it
+                        $insertResult = $ledBuilder->insert([
+                            'MachineID' => $MachineID,
+                            'State' => 'setup',
+                            'ledStatus' => 1
+                        ]);
+                        if ($insertResult === false) {
+                            $ledUpdateResult = 'LED insert failed: ' . $db->error();
+                        } else {
+                            $ledUpdateResult = 'LED record created and updated (ID: ' . $db->insertID() . ')';
+                        }
+                    }
+                } catch (\Exception $e) {
+                    $ledUpdateResult = 'LED operation failed: ' . $e->getMessage();
                 }
 
                 // Insert into machine history for Setup
@@ -305,20 +365,32 @@ class AdditionalAPI extends BaseController
                 // Update LED state for setup OFF
                 $ledBuilder = $db->table('ledstate');
                 
-                // First check if the record exists
-                $existingRecord = $ledBuilder->where('State', 'setup')->where('MachineID', $MachineID)->get()->getRow();
-                
-                if ($existingRecord) {
-                    $ledBuilder->where('State', 'setup')->where('MachineID', $MachineID)->update(['ledStatus' => 0]);
-                    $ledUpdateResult = 'LED updated successfully';
-                } else {
-                    // If record doesn't exist, create it
-                    $ledBuilder->insert([
-                        'MachineID' => $MachineID,
-                        'State' => 'setup',
-                        'ledStatus' => 0
-                    ]);
-                    $ledUpdateResult = 'LED record created and updated';
+                try {
+                    // First check if the record exists
+                    $existingRecord = $ledBuilder->where('State', 'setup')->where('MachineID', $MachineID)->get()->getRow();
+                    
+                    if ($existingRecord) {
+                        $updateResult = $ledBuilder->where('State', 'setup')->where('MachineID', $MachineID)->update(['ledStatus' => 0]);
+                        if ($updateResult === false) {
+                            $ledUpdateResult = 'LED update failed: ' . $db->error();
+                        } else {
+                            $ledUpdateResult = 'LED updated successfully (affected rows: ' . $updateResult . ')';
+                        }
+                    } else {
+                        // If record doesn't exist, create it
+                        $insertResult = $ledBuilder->insert([
+                            'MachineID' => $MachineID,
+                            'State' => 'setup',
+                            'ledStatus' => 0
+                        ]);
+                        if ($insertResult === false) {
+                            $ledUpdateResult = 'LED insert failed: ' . $db->error();
+                        } else {
+                            $ledUpdateResult = 'LED record created and updated (ID: ' . $db->insertID() . ')';
+                        }
+                    }
+                } catch (\Exception $e) {
+                    $ledUpdateResult = 'LED operation failed: ' . $e->getMessage();
                 }
 
                 // Fetch the ArcOn time to calculate ArcTotal
@@ -446,6 +518,86 @@ class AdditionalAPI extends BaseController
                 'MachineID' => $row->MachineID,
                 'State' => $row->State,
                 'ledStatus' => (bool)$row->ledStatus
+            ];
+        }
+        
+        // Return JSON response
+        return $this->response->setJSON($response);
+    }
+
+    public function testLedUpdate()
+    {
+        $apiKey = $this->request->getGet('apiKey');
+        $MachineID = $this->request->getGet('MachineID');
+        $State = $this->request->getGet('State'); // maintenance, setup, tooling
+        $ledStatus = $this->request->getGet('ledStatus'); // 0 or 1
+
+        if ($apiKey !== $this->apiKey) {
+            return $this->response->setStatusCode(400)->setBody("API key invalid.");
+        }
+
+        if (!$MachineID || !$State || !in_array($ledStatus, ['0', '1'])) {
+            return $this->response->setStatusCode(400)->setBody("Missing or invalid parameters. Required: MachineID, State, ledStatus (0 or 1)");
+        }
+
+        // Load the database connection
+        $db = \Config\Database::connect();
+        
+        try {
+            $ledBuilder = $db->table('ledstate');
+            
+            // First check if the record exists
+            $existingRecord = $ledBuilder->where('State', $State)->where('MachineID', $MachineID)->get()->getRow();
+            
+            $response = [
+                'MachineID' => $MachineID,
+                'State' => $State,
+                'ledStatus' => (int)$ledStatus,
+                'existingRecord' => $existingRecord ? true : false,
+                'operation' => ''
+            ];
+            
+            if ($existingRecord) {
+                $updateResult = $ledBuilder->where('State', $State)->where('MachineID', $MachineID)->update(['ledStatus' => (int)$ledStatus]);
+                if ($updateResult === false) {
+                    $response['operation'] = 'LED update failed: ' . $db->error();
+                    $response['success'] = false;
+                } else {
+                    $response['operation'] = 'LED updated successfully (affected rows: ' . $updateResult . ')';
+                    $response['success'] = true;
+                }
+            } else {
+                // If record doesn't exist, create it
+                $insertResult = $ledBuilder->insert([
+                    'MachineID' => $MachineID,
+                    'State' => $State,
+                    'ledStatus' => (int)$ledStatus
+                ]);
+                if ($insertResult === false) {
+                    $response['operation'] = 'LED insert failed: ' . $db->error();
+                    $response['success'] = false;
+                } else {
+                    $response['operation'] = 'LED record created and updated (ID: ' . $db->insertID() . ')';
+                    $response['success'] = true;
+                }
+            }
+            
+            // Verify the update by querying the record again
+            $verifyRecord = $ledBuilder->where('State', $State)->where('MachineID', $MachineID)->get()->getRow();
+            $response['verification'] = $verifyRecord ? [
+                'ID' => $verifyRecord->ID,
+                'MachineID' => $verifyRecord->MachineID,
+                'State' => $verifyRecord->State,
+                'ledStatus' => (bool)$verifyRecord->ledStatus
+            ] : null;
+            
+        } catch (\Exception $e) {
+            $response = [
+                'MachineID' => $MachineID,
+                'State' => $State,
+                'ledStatus' => (int)$ledStatus,
+                'operation' => 'LED operation failed: ' . $e->getMessage(),
+                'success' => false
             ];
         }
         
