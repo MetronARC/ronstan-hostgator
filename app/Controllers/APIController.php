@@ -167,25 +167,26 @@ class APIController extends BaseController
             // Fetch the Name from the employee table
             $employeeRow = $employeeQuery->getRowArray();
             $employeeName = $employeeRow['Name'];
-
-            // Prepare the insert query for heartBeatTable
-            $heartbeatBuilder = $db->table('heartbeattable');
-            $heartbeatData = [
-                'MachineID'  => $machineID,
-                'WeldID'     => $weldID,
-                'Area'       => $area,
-                'startBeat'  => $currentDateTime,
-                'Name'       => $employeeName,
-            ];
-
-            // Insert the new heartbeat record
-            if ($heartbeatBuilder->insert($heartbeatData)) {
-                return $this->response->setStatusCode(200)->setBody("New heartbeat record inserted successfully.");
-            } else {
-                return $this->response->setStatusCode(500)->setBody("Error inserting heartbeat record.");
-            }
         } else {
-            return $this->response->setStatusCode(404)->setBody("No employee found with UID: $UID.");
+            // UID does not exist, set Name to "John Doe"
+            $employeeName = "John Doe";
+        }
+
+        // Prepare the insert query for heartBeatTable
+        $heartbeatBuilder = $db->table('heartbeattable');
+        $heartbeatData = [
+            'MachineID'  => $machineID,
+            'WeldID'     => $weldID,
+            'Area'       => $area,
+            'startBeat'  => $currentDateTime,
+            'Name'       => $employeeName,
+        ];
+
+        // Insert the new heartbeat record
+        if ($heartbeatBuilder->insert($heartbeatData)) {
+            return $this->response->setStatusCode(200)->setBody("New heartbeat record inserted successfully.");
+        } else {
+            return $this->response->setStatusCode(500)->setBody("Error inserting heartbeat record.");
         }
     }
 
@@ -220,7 +221,7 @@ class APIController extends BaseController
                     $row = $query->getRow();
                     return $row->Name;
                 }
-                return ''; // Return empty string if no data found
+                return 'John Doe'; // Return "John Doe" if no data found
             }
 
             $name = getEmployeeName($db, $UID);
