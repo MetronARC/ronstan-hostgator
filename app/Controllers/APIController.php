@@ -382,8 +382,8 @@ class APIController extends BaseController
             $row = $query->getRow();
             $Name = $row->Name;
         } else {
-            // UID does not exist, set Name to an empty string
-            return $this->response->setBody('Card not in the database');
+            // UID does not exist, set Name to "John Doe"
+            $Name = "John Doe";
         }
 
         // Handle different areas
