@@ -392,9 +392,6 @@ class APIController extends BaseController
             $tableHistory = $Area == "1" ? "machinehistory1" : "machinehistory2";
 
             if ($Status == "ArcOn") {
-                // Set all ledstate ledStatus to false
-                $db->query("UPDATE ledstate SET ledStatus = 'false'");
-
                 // Proceed with normal ArcOn operation
                 $builder = $db->table($tableHistory);
                 $dataArcOn = [
@@ -466,9 +463,6 @@ class APIController extends BaseController
                     return $this->response->setBody('No ArcOn record found to calculate ArcTotal.');
                 }
             } else if ($Status == "ArcCheck") {
-                // Set all ledstate ledStatus to false
-                $db->query("UPDATE ledstate SET ledStatus = 'false'");
-
                 // Handle ArcCheck on the correct machinehistory table
                 $machineHistoryTable = $Area == "1" ? "machinehistory1" : "machinehistory2";
                 $machineHistoryBuilder = $db->table($machineHistoryTable);
